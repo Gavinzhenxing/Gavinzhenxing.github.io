@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>hexo博客安装运行 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、需要安装的插件①Node.js  ② Git  ③git内安装hexo检测node安装是否成功：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客安装运行">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/my%20first/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、需要安装的插件①Node.js  ② Git  ③git内安装hexo检测node安装是否成功：">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-05T01:59:40.000Z">
+<meta property="article:modified_time" content="2020-07-05T09:11:33.844Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-my first" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/05/my%20first/" class="article-date">
+  <time datetime="2020-07-05T01:59:40.000Z" itemprop="datePublished">2020-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo博客安装运行
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、需要安装的插件"><a href="#一、需要安装的插件" class="headerlink" title="一、需要安装的插件"></a>一、需要安装的插件</h2><p>①Node.js  ② Git  ③git内安装hexo<br>检测node安装是否成功：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v  ;返回版本号</span><br><span class="line">npm -v   ;返回版本号</span><br></pre></td></tr></table></figure>
+<p>安装淘宝的镜像源（国内为了安装快捷）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  </span><br><span class="line">cnpm      ;检测 返回cnpm的信息</span><br><span class="line">cnpm -v   ;返回cnpm的版本信息</span><br></pre></td></tr></table></figure>
+<p>安装hexo   ;如果失败重新来过就可以了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br><span class="line">hexo -v   ;返回hexo的版本信息</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、初始化操作过程"><a href="#二、初始化操作过程" class="headerlink" title="二、初始化操作过程"></a>二、初始化操作过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pwd   （查询目录所在位置）</span><br><span class="line">mkdir Blog   （在目录下建立文件夹Blog）</span><br><span class="line">cd Blog&#x2F;   （进入Blog文件夹）</span><br><span class="line">pwd    （检测是否进入Blog文件夹）</span><br><span class="line">hexo init  （即：初始化hexo）</span><br><span class="line">ls -l   （查看初始化获得的文件）</span><br><span class="line">hexo s   （启动hexo）</span><br></pre></td></tr></table></figure>
+<p>进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可预览<br>———————————————————————————————————————</p>
+<h2 id="三、深化操作1（将博客部署到GitHub上）"><a href="#三、深化操作1（将博客部署到GitHub上）" class="headerlink" title="三、深化操作1（将博客部署到GitHub上）"></a>三、深化操作1（将博客部署到GitHub上）</h2><p>在Blog目录下安装一个hexo部署插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br><span class="line">vim _config.yml （原始的是没有repo，和branch的，而且type后面也没有东西）</span><br></pre></td></tr></table></figure>
+<p>对这段代码进行更改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type    一个名字,建议写成git方便识别</span><br><span class="line">repo    repository仓库地址   将刚刚新建的github仓库地址复制到这里就可以了</span><br><span class="line">branch  分支这里设置管理员  master</span><br></pre></td></tr></table></figure>
+<p>更改以后进行保存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d     ;将本地文件部署到github新建的仓库中</span><br></pre></td></tr></table></figure>
+
+<p>然后通过访问     https://+自己的仓库名   就可以访问部署到github上的blog了<br>（例：<a href="https://gavinzhenxing.github.io/" target="_blank" rel="noopener">https://gavinzhenxing.github.io/</a>    ）</p>
+<h2 id="四、深化操作2（更换hexo博客主题）"><a href="#四、深化操作2（更换hexo博客主题）" class="headerlink" title="四、深化操作2（更换hexo博客主题）"></a>四、深化操作2（更换hexo博客主题）</h2><p>这里以  yilia  主题为例进行更换<br>首先下载  yilia  主题<br>在Git中输入<br>git clone <a href="http://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">http://github.com/litten/hexo-theme-yilia.git</a>  themes/yilia<br>—————————-（克隆地址）—————-（克隆之后的本地位置）</p>
+<p>找到Blog文件中的   _config.yml  文件，使用编译器打开，建议使用   Visual Studio Code打开</p>
+<p>找到这部分代码（即theme）<br>将冒号后面的内容改为刚刚新建的yilia</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean             清除数据库之类</span><br><span class="line">hexo g               生成静态网站</span><br><span class="line">hexo d               将现在的文件部署到github中</span><br></pre></td></tr></table></figure>
+<p>这样就实现了主题的更改</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://www.bilibili.com/video/BV1Yb411a7ty?t=752" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty?t=752</a><br><a href="https://www.bilibili.com/video/BV1pt411K7o9?p=2" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1pt411K7o9?p=2</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/05/my%20first/" data-id="ckc8xferj0000zgwmhezf3o8v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/05/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/05/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/05/my%20first/">hexo博客安装运行</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
