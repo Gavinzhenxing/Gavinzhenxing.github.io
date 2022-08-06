@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20220806161846.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20220806222025.png">
 <meta property="article:published_time" content="2022-08-06T08:23:03.000Z">
-<meta property="article:modified_time" content="2022-08-06T14:24:41.751Z">
+<meta property="article:modified_time" content="2022-08-06T14:28:59.477Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="机器学习">
 <meta property="article:tag" content="Jupyter Notebook">
@@ -230,7 +230,7 @@
 
 <span id="more"></span>
 
-<h2 id="1、Matplotlib-常用函数"><a href="#1、Matplotlib-常用函数" class="headerlink" title="1、Matplotlib 常用函数"></a>1、Matplotlib 常用函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mac:这两行代码解决 plt 中文显示的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;Arial Unicode MS&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消边框</span></span><br><span class="line">ax=plt.gca()</span><br><span class="line">ax.spines[<span class="string">&#x27;top&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;right&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;bottom&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;left&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加网格</span></span><br><span class="line">plt.grid(axis=<span class="string">&#x27;y&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="1、Matplotlib-常用函数"><a href="#1、Matplotlib-常用函数" class="headerlink" title="1、Matplotlib 常用函数"></a>1、Matplotlib 常用函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mac:这两行代码解决 plt 中文显示的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;Arial Unicode MS&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消边框</span></span><br><span class="line">ax=plt.gca()</span><br><span class="line">ax.spines[<span class="string">&#x27;top&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;right&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;bottom&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;left&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加 y 轴网格</span></span><br><span class="line">plt.grid(axis=<span class="string">&#x27;y&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -251,35 +251,20 @@
 </li>
 </ul>
 <p>针对MacOS系统：</p>
-<ol>
-<li>在终端进入python3环境，查看matplotlib字体路径：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib    </span><br><span class="line"><span class="built_in">print</span>(matplotlib.matplotlib_fname())</span><br></pre></td></tr></table></figure>
+<h3 id="Step1-在终端进入python3环境，查看matplotlib字体路径："><a href="#Step1-在终端进入python3环境，查看matplotlib字体路径：" class="headerlink" title="Step1. 在终端进入python3环境，查看matplotlib字体路径："></a>Step1. 在终端进入python3环境，查看matplotlib字体路径：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib    </span><br><span class="line"><span class="built_in">print</span>(matplotlib.matplotlib_fname())</span><br></pre></td></tr></table></figure>
 
 <p>找到自己的matplotlib字体文件路径：</p>
 <p>比如<code>/Users/gavin/opt/anaconda3/lib/python3.9/site-packages/matplotlib/mpl-data/matplotlibrc</code></p>
 <p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20220806222025.png" style="zoom:67%;" />1</p>
-<ol start="2">
-<li>下载<code>SimHei.ttf</code>字体</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://fonts.lanzoui.com/iWkQlli4y4b">宋体SimHei.tff 下载地址1</a></p>
+<h3 id="Step2-下载SimHei-ttf字体"><a href="#Step2-下载SimHei-ttf字体" class="headerlink" title="Step2. 下载SimHei.ttf字体"></a>Step2. 下载<code>SimHei.ttf</code>字体</h3><p><a target="_blank" rel="noopener" href="https://fonts.lanzoui.com/iWkQlli4y4b">宋体SimHei.tff 下载地址1</a></p>
 <p><a target="_blank" rel="noopener" href="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/SimHei.ttf">宋体SimHei.tff 下载地址2</a></p>
 <p><a target="_blank" rel="noopener" href="https://dl.freefontsfamily.com/download/Times-New-Roman-Font/">Times New Roman.tff 下载地址1</a></p>
 <p>[Times New Roman.tff 下载地址2](<a target="_blank" rel="noopener" href="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/times">https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/times</a> new roman.ttf)</p>
-<ol start="3">
-<li>将下载好的SimHei.ttf字体移动到第一步查询到的字体目录.&#x2F;fonts&#x2F;ttf&#x2F;下：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv ~/Downloads/SimHei.ttf ~/opt/anaconda3/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意字体文件名称一定是：SimHei.ttf</span></span><br></pre></td></tr></table></figure>
+<h3 id="Step3-将下载好的SimHei-ttf字体移动到第一步查询到的字体目录-x2F-fonts-x2F-ttf-x2F-下："><a href="#Step3-将下载好的SimHei-ttf字体移动到第一步查询到的字体目录-x2F-fonts-x2F-ttf-x2F-下：" class="headerlink" title="Step3. 将下载好的SimHei.ttf字体移动到第一步查询到的字体目录.&#x2F;fonts&#x2F;ttf&#x2F;下："></a>Step3. 将下载好的SimHei.ttf字体移动到第一步查询到的字体目录.&#x2F;fonts&#x2F;ttf&#x2F;下：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv ~/Downloads/SimHei.ttf ~/opt/anaconda3/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意字体文件名称一定是：SimHei.ttf</span></span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li>打开终端，进入python环境，清理matplotlib缓冲目录：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib</span><br><span class="line">print(matplotlib.get_cachedir())</span><br></pre></td></tr></table></figure>
+<h3 id="Step4-打开终端，进入python环境，清理matplotlib缓冲目录："><a href="#Step4-打开终端，进入python环境，清理matplotlib缓冲目录：" class="headerlink" title="Step4. 打开终端，进入python环境，清理matplotlib缓冲目录："></a>Step4. 打开终端，进入python环境，清理matplotlib缓冲目录：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib</span><br><span class="line">print(matplotlib.get_cachedir())</span><br></pre></td></tr></table></figure>
 
-<ol start="5">
-<li>修改原始文件：</li>
-</ol>
-<p>打开第一步找到的字体路径：<code>/Users/gavin/miniforge3/envs/py38/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc</code>进行修改：</p>
+<h3 id="Step5-修改原始文件："><a href="#Step5-修改原始文件：" class="headerlink" title="Step5. 修改原始文件："></a>Step5. 修改原始文件：</h3><p>打开第一步找到的字体路径：<code>/Users/gavin/miniforge3/envs/py38/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc</code>进行修改：</p>
 <blockquote>
 <p>访达跳转路径快捷键：<code>command + shift + G</code></p>
 <p>跳转目录快捷键：<code>command + F</code></p>
@@ -287,10 +272,7 @@
 <p>查找指定内容<br>如<code>font.family</code>， <code>font.sans-serif</code>，<code>axes.unicode_minus</code>.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#去掉前面的#</span></span><br><span class="line">font.family:  sans-serif</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉前面的#，手动加SimHei</span></span><br><span class="line">font.sans-serif: SimHei, DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉前面的#，把True改为False</span></span><br><span class="line">axes.unicode_minus: <span class="literal">False</span>  <span class="comment"># use Unicode for the minus symbol rather than hyphen.  See</span></span><br><span class="line">                           <span class="comment"># https://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<ol start="6">
-<li>重启电脑，测试是否成功</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line">y = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>))</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;x轴数据&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;y轴数据&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h3 id="Step6-重启电脑，测试是否成功"><a href="#Step6-重启电脑，测试是否成功" class="headerlink" title="Step6. 重启电脑，测试是否成功"></a>Step6. 重启电脑，测试是否成功</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line">y = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>))</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;x轴数据&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;y轴数据&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 
 
@@ -411,6 +393,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2022/08/06/%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          批判性思维
+        
+      </div>
+    </a>
+  
   
     <a href="/2022/07/25/2020-10-18-MAC%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">MAC的一些使用技巧</div>
@@ -440,7 +431,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81Matplotlib-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">1、Matplotlib 常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Matplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">2、Matplotlib无法显示中文问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">3.</span> <span class="toc-text">参考文献</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81Matplotlib-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">1、Matplotlib 常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Matplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">2、Matplotlib无法显示中文问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-%E5%9C%A8%E7%BB%88%E7%AB%AF%E8%BF%9B%E5%85%A5python3%E7%8E%AF%E5%A2%83%EF%BC%8C%E6%9F%A5%E7%9C%8Bmatplotlib%E5%AD%97%E4%BD%93%E8%B7%AF%E5%BE%84%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">Step1. 在终端进入python3环境，查看matplotlib字体路径：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-%E4%B8%8B%E8%BD%BDSimHei-ttf%E5%AD%97%E4%BD%93"><span class="toc-number">2.2.</span> <span class="toc-text">Step2. 下载SimHei.ttf字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-%E5%B0%86%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84SimHei-ttf%E5%AD%97%E4%BD%93%E7%A7%BB%E5%8A%A8%E5%88%B0%E7%AC%AC%E4%B8%80%E6%AD%A5%E6%9F%A5%E8%AF%A2%E5%88%B0%E7%9A%84%E5%AD%97%E4%BD%93%E7%9B%AE%E5%BD%95-x2F-fonts-x2F-ttf-x2F-%E4%B8%8B%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">Step3. 将下载好的SimHei.ttf字体移动到第一步查询到的字体目录.&#x2F;fonts&#x2F;ttf&#x2F;下：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step4-%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF%EF%BC%8C%E8%BF%9B%E5%85%A5python%E7%8E%AF%E5%A2%83%EF%BC%8C%E6%B8%85%E7%90%86matplotlib%E7%BC%93%E5%86%B2%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="toc-number">2.4.</span> <span class="toc-text">Step4. 打开终端，进入python环境，清理matplotlib缓冲目录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step5-%E4%BF%AE%E6%94%B9%E5%8E%9F%E5%A7%8B%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">2.5.</span> <span class="toc-text">Step5. 修改原始文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step6-%E9%87%8D%E5%90%AF%E7%94%B5%E8%84%91%EF%BC%8C%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-number">2.6.</span> <span class="toc-text">Step6. 重启电脑，测试是否成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">3.</span> <span class="toc-text">参考文献</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -990,6 +981,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sklearn</a>
               </li>
              
@@ -1003,10 +998,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回归树</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1046,19 +1037,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">frp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">模糊逻辑</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">粗糙集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">frp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1122,15 +1113,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">第三章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">贝叶斯分类器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">拉格朗日乘子法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">第三章</a>
               </li>
              
               <li class="article-tag-list-item">
