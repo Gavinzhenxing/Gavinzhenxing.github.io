@@ -13,17 +13,17 @@
 <meta property="og:url" content="http://example.com/2022/08/06/%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4/index.html">
 <meta property="og:site_name" content="Gavin的部落阁">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062226472.png">
-<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20220806222025.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062231977.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062236473.png">
 <meta property="article:published_time" content="2022-08-06T11:23:03.000Z">
-<meta property="article:modified_time" content="2022-08-06T14:26:50.581Z">
+<meta property="article:modified_time" content="2022-08-06T15:07:39.965Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="机器学习">
 <meta property="article:tag" content="Jupyter Notebook">
 <meta property="article:tag" content="Matplotlib">
 <meta property="article:tag" content="函数">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062226472.png">
+<meta name="twitter:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062231977.png">
   
     <link rel="alternative" href="/atom.xml" title="Gavin的部落阁" type="application/atom+xml">
   
@@ -225,76 +225,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062226472.png"></p>
+        <p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062231977.png"></p>
 <br>
 
 <span id="more"></span>
 
-<h2 id="1、Matplotlib-常用函数"><a href="#1、Matplotlib-常用函数" class="headerlink" title="1、Matplotlib 常用函数"></a>1、Matplotlib 常用函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mac:这两行代码解决 plt 中文显示的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;Arial Unicode MS&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消边框</span></span><br><span class="line">ax=plt.gca()</span><br><span class="line">ax.spines[<span class="string">&#x27;top&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;right&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;bottom&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">ax.spines[<span class="string">&#x27;left&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加网格</span></span><br><span class="line">plt.grid(axis=<span class="string">&#x27;y&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 
-
-<h2 id="2、Matplotlib无法显示中文问题"><a href="#2、Matplotlib无法显示中文问题" class="headerlink" title="2、Matplotlib无法显示中文问题"></a>2、Matplotlib无法显示中文问题</h2><ul>
-<li>方法一：在每个目录单独申明所使用的字体，注意 Win 和 Mac 是有区别的，因为 Win 的一些字体 Mac 没有。<ul>
-<li>优点：简单，直接加上下述代码即可</li>
-<li>缺点：每个都得加，而且系统里没有的字体无法指定</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MAC</span></span><br><span class="line"><span class="keyword">from</span> matplotlib.ticker <span class="keyword">import</span> FuncFormatter</span><br><span class="line"><span class="comment"># 这一行代码解决 plt 中文显示的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;Arial Unicode MS&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows</span></span><br><span class="line"><span class="keyword">from</span> matplotlib.ticker <span class="keyword">import</span> FuncFormatter</span><br><span class="line"><span class="comment"># 这两行代码解决 plt 中文显示的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimSun&#x27;</span>]</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208062236473.png"></p>
 <ul>
-<li>方法二：全局申明，将需要的字体保存到 matplotlib 的字体库中，然后更新配置文件<ul>
-<li>缺点：复杂</li>
-<li>优点：一劳永逸，可以添加系统里没有的字体</li>
+<li>学会批判性思考（分清论题、论据、结论）<ul>
+<li>论题：要找准问题，才能针对性地回应，将你论述的内容变成一个问题。</li>
+<li>论据：找到理由和证据，并识别背后的假设——假设分为价值观假设和描述性假设。</li>
+<li>结论：结论清晰可得，回应论题；警惕二分式思维，采用“灰度思维”。</li>
 </ul>
 </li>
+<li>规避思维的陷阱<ul>
+<li>论证中的逻辑谬误：人身攻击型谬误（对人不对事）、叙述谬误、攻击稻草人。</li>
+<li>含糊不清的词语：定义、解释你的关键词，让表达准确有力。</li>
+<li>具有欺骗性的数据：对数据崇拜的惯性，导致错误的判断。</li>
+<li>省略那些不提的内容：找到那些省略不提的信息，避免被误导。</li>
 </ul>
-<p>针对MacOS系统：</p>
-<ol>
-<li>在终端进入python3环境，查看matplotlib字体路径：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib    </span><br><span class="line"><span class="built_in">print</span>(matplotlib.matplotlib_fname())</span><br></pre></td></tr></table></figure>
-
-<p>找到自己的matplotlib字体文件路径：</p>
-<p>比如<code>/Users/gavin/opt/anaconda3/lib/python3.9/site-packages/matplotlib/mpl-data/matplotlibrc</code></p>
-<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20220806222025.png" style="zoom:67%;" />1</p>
-<ol start="2">
-<li>下载<code>SimHei.ttf</code>字体</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://fonts.lanzoui.com/iWkQlli4y4b">宋体SimHei.tff 下载地址1</a></p>
-<p><a target="_blank" rel="noopener" href="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/SimHei.ttf">宋体SimHei.tff 下载地址2</a></p>
-<p><a target="_blank" rel="noopener" href="https://dl.freefontsfamily.com/download/Times-New-Roman-Font/">Times New Roman.tff 下载地址1</a></p>
-<p>[Times New Roman.tff 下载地址2](<a target="_blank" rel="noopener" href="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/times">https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/times</a> new roman.ttf)</p>
-<ol start="3">
-<li>将下载好的SimHei.ttf字体移动到第一步查询到的字体目录.&#x2F;fonts&#x2F;ttf&#x2F;下：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv ~/Downloads/SimHei.ttf ~/opt/anaconda3/lib/python3.9/site-packages/matplotlib/mpl-data/fonts/ttf/SimHei.ttf</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意字体文件名称一定是：SimHei.ttf</span></span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>打开终端，进入python环境，清理matplotlib缓冲目录：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib</span><br><span class="line">print(matplotlib.get_cachedir())</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>修改原始文件：</li>
-</ol>
-<p>打开第一步找到的字体路径：<code>/Users/gavin/miniforge3/envs/py38/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc</code>进行修改：</p>
-<blockquote>
-<p>访达跳转路径快捷键：<code>command + shift + G</code></p>
-<p>跳转目录快捷键：<code>command + F</code></p>
-</blockquote>
-<p>查找指定内容<br>如<code>font.family</code>， <code>font.sans-serif</code>，<code>axes.unicode_minus</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#去掉前面的#</span></span><br><span class="line">font.family:  sans-serif</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉前面的#，手动加SimHei</span></span><br><span class="line">font.sans-serif: SimHei, DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif</span><br><span class="line"></span><br><span class="line"><span class="comment">#去掉前面的#，把True改为False</span></span><br><span class="line">axes.unicode_minus: <span class="literal">False</span>  <span class="comment"># use Unicode for the minus symbol rather than hyphen.  See</span></span><br><span class="line">                           <span class="comment"># https://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>重启电脑，测试是否成功</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line">y = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">2</span>))</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;x轴数据&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;y轴数据&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012744245/article/details/119735461">CSDN - 快乐小码农 </a></p>
+</li>
+<li>如何判断一个观点：<ul>
+<li>判定利益冲突：很多争吵双方每一边都有充足的道理，但是道理的背后，都是利益冲突。</li>
+<li>寻找逻辑漏洞：使用逻辑过滤信息和结论，“按照你的逻辑，只有xxx才能xxx，但是真实的情况不是这样的”</li>
+<li>成本原则：利用成本思维进行判断</li>
+</ul>
+</li>
+<li>如何判断诡辩？</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>《学会提问》——尼尔·布朗[美]</p>
+<p>《吴军·硅谷来信第一季》：第259 — 261 封信</p>
 
       
 
@@ -440,7 +402,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81Matplotlib-%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">1、Matplotlib 常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Matplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">2、Matplotlib无法显示中文问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">3.</span> <span class="toc-text">参考文献</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">1.</span> <span class="toc-text">参考文献</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -574,6 +536,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">环境与配置</a>
               </li>
              
@@ -610,35 +576,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">GAN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">BUG记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -659,6 +597,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GAN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPU</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">BUG记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -882,19 +844,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">实战项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">名片管理系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Shebang</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">单例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -922,34 +880,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">单例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模块</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">文件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">eval函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">固定写法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">飞机大战</a>
               </li>
              
@@ -974,11 +904,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+                <a href="javascript:void(0)" class="js-tag color5">实战项目</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">thread</a>
+                <a href="javascript:void(0)" class="js-tag color2">名片管理系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Shebang</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模块</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">eval函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">固定写法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1007,6 +961,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回归树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">thread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1046,6 +1008,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">frp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">模糊逻辑</a>
               </li>
              
@@ -1054,11 +1024,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">frp</a>
+                <a href="javascript:void(0)" class="js-tag color5">思腾合力</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1086,19 +1056,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">思腾合力</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1143,6 +1101,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
              
               <li class="article-tag-list-item">
