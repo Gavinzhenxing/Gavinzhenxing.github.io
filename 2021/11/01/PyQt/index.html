@@ -33,13 +33,30 @@
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20211224203210.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20211224203226.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/img/20211227162828.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022141254.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022144903.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022145303.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022143436.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022143539.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022143757.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022164343.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221023103949.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221023105153.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221023113313.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/59d09abe2e91fa9c3dd5c6942478dde.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/51e9966a3eeb061c6d5906540e4ca2c.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110321.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110331.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110641.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110629.png">
 <meta property="article:published_time" content="2021-11-01T07:49:40.000Z">
-<meta property="article:modified_time" content="2022-08-07T14:25:54.479Z">
+<meta property="article:modified_time" content="2022-10-31T10:35:46.000Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="学习日记">
 <meta property="article:tag" content="Python基础">
 <meta property="article:tag" content="PyQt5">
 <meta property="article:tag" content="PySide2">
+<meta property="article:tag" content="Axes">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202208072225438.png">
   
@@ -357,6 +374,229 @@
 <p><strong>解决办法：</strong> 建立虚拟环境，在虚拟环境里 <code>pyinstaller</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># conda 创建虚拟环境</span></span><br><span class="line">conda create -n your_env_name python=x.x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line">Linux:  <span class="built_in">source</span> activate your_env_nam</span><br><span class="line">Windows: activate your_env_name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在虚拟环境中安装包</span></span><br><span class="line">conda install -n your_env_name [package]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭虚拟环境</span></span><br><span class="line">deactivate env_name</span><br><span class="line">或者`activate root`切回root环境</span><br><span class="line">Linux下：<span class="built_in">source</span> deactivate </span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除虚拟环境</span></span><br><span class="line">conda remove -n your_env_name --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除环境钟的某个包</span></span><br><span class="line">conda remove --name <span class="variable">$your_env_name</span>  <span class="variable">$package_name</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="2-5-嵌入Matplotlib"><a href="#2-5-嵌入Matplotlib" class="headerlink" title="2.5 嵌入Matplotlib"></a>2.5 嵌入Matplotlib</h3><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_28053421/article/details/113828372">CSDN1</a>       <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43469047/article/details/115607083">CSDN2</a></p>
+<p>依托于FigureCanvas画图，加载的图形（FigureCanvas）不能直接放到graphicview控件中，必须先放到graphicScene，然后再把graphicscene放到graphicview中</p>
+<p>即 FigureCanvas -&gt; graphicScene -&gt; graphicview</p>
+</blockquote>
+<p><strong>1、 设计一个GraphicsView 和 一个 PushButton</strong></p>
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022141254.png"></p>
+<p><strong>2、 定义一个类，继承FigureCanvas</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">from</span> matplotlib.backends.backend_qt5agg <span class="keyword">import</span> FigureCanvasQTAgg <span class="keyword">as</span> FigureCanvas</span><br><span class="line"><span class="comment"># from matplotlib.figure import Figure</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"> </span><br><span class="line">matplotlib.use(<span class="string">&quot;Qt5Agg&quot;</span>)  <span class="comment"># 声明使用QT5</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyFigureCanvas</span>(<span class="title class_ inherited__">FigureCanvas</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    通过继承FigureCanvas类，使得该类既是一个PyQt5的Qwidget，又是一个matplotlib的FigureCanvas，这是连接pyqt5与matplotlib的关键</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, parent=<span class="literal">None</span>, width=<span class="number">10</span>, height=<span class="number">5</span>, xlim=(<span class="params"><span class="number">0</span>, <span class="number">2500</span></span>), ylim=(<span class="params">-<span class="number">2</span>, <span class="number">2</span></span>), dpi=<span class="number">100</span></span>):</span><br><span class="line">        <span class="comment"># 创建一个Figure</span></span><br><span class="line">        fig = plt.Figure(figsize=(width, height), dpi=dpi, tight_layout=<span class="literal">True</span>)  <span class="comment"># tight_layout: 用于去除画图时两边的空白</span></span><br><span class="line"> </span><br><span class="line">        FigureCanvas.__init__(self, fig)  <span class="comment"># 初始化父类</span></span><br><span class="line">        self.setParent(parent)</span><br><span class="line"> </span><br><span class="line">        self.axes = fig.add_subplot(<span class="number">111</span>)  <span class="comment"># 添加子图</span></span><br><span class="line">        <span class="comment"># self.axes.spines[&#x27;top&#x27;].set_visible(False)  # 去掉绘图时上面的横线</span></span><br><span class="line">        <span class="comment"># self.axes.spines[&#x27;right&#x27;].set_visible(False)  # 去掉绘图时右面的横线</span></span><br><span class="line">        self.axes.set_xlim(xlim)</span><br><span class="line">        self.axes.set_ylim(ylim)</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以开始绘图了</p>
+<blockquote>
+<p>这里 self.ui.graphicsView.width() &#x2F; 101 的作用：</p>
+<p>因为直接使用默认绘制出来的图的大小，一般都会与我们窗口里 GraphicsView 的大小不一致，会造成图像显示不完全，需要拖动滚动条看图像。这里我们将绘图的大小设置为与GraphicsView相匹配的大小，就可以显示出全部图像。<br>之所以  “&#x2F;101”，我感觉可能是 graphicsView.width() 得到的结果 和 plt的figsize里设置图大小的参数 的单位是不一样的，所以要除以一个数，让图像能刚好全部显示在GraphicsView里</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化 gv_visual_data 的显示，建议把这部分紧跟着功能写，要不重复点击按钮无法刷新显示</span></span><br><span class="line">self.gv_visual_data_content = MyFigureCanvas(width=self.ui.graphicsView.width() / <span class="number">101</span>,</span><br><span class="line">                                             height=self.ui.graphicsView.height() / <span class="number">101</span>,</span><br><span class="line">                                             xlim=(<span class="number">0</span>, <span class="number">2</span>*np.pi),</span><br><span class="line">                                             ylim=(-<span class="number">1</span>, <span class="number">1</span>))  <span class="comment"># 实例化一个FigureCanvas</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3、写好连接槽，点击按钮显示功能</strong></p>
+<p>连接槽</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.ui.btn_sin.clicked.connect(self.draw_fps)</span><br></pre></td></tr></table></figure>
+
+<p>写函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">def</span> <span class="title function_">draw_fps</span>(<span class="params">self</span>):</span><br><span class="line">      begin = time.asctime(time.localtime(time.time()))</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;开始时间为：&quot;</span>, begin)</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 导入数据</span></span><br><span class="line"></span><br><span class="line">      df = pd.read_excel(<span class="string">r&quot;D:/BaiduSyncdisk/dataset/dataset/1000excel/位置表1.xls&quot;</span>, sheet_name=<span class="string">&quot;1&quot;</span>, header=<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 把数据变成 ndarray 格式</span></span><br><span class="line">      df = df.values</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 创建空数组</span></span><br><span class="line">      X = np.zeros((<span class="number">9000</span>, <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 把导入数据变成一行</span></span><br><span class="line">      df = df.reshape(<span class="number">9000</span>, )</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 纵坐标赋值为表格值</span></span><br><span class="line">      X[:, <span class="number">1</span>] = df</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 横坐标每30个 +1</span></span><br><span class="line">      i = <span class="number">0</span></span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">300</span>):</span><br><span class="line">          X[i:i + <span class="number">30</span>:, <span class="number">0</span>] = j + <span class="number">1</span></span><br><span class="line">          i = i + <span class="number">30</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">##############################################################</span></span><br><span class="line">      <span class="comment"># 导入数据</span></span><br><span class="line">      df2 = pd.read_excel(<span class="string">r&quot;D:/BaiduSyncdisk/dataset/dataset/1000excel/位置表1.xls&quot;</span>, sheet_name=<span class="string">&quot;1&quot;</span>, header=<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 把数据变成 ndarray 格式</span></span><br><span class="line">      df2 = df2.values</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 创建空数组</span></span><br><span class="line">      Y = np.zeros((<span class="number">9000</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 把导入数据变成一行</span></span><br><span class="line">      df2 = df2.reshape(<span class="number">9000</span>, )</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 纵坐标赋值为表格值</span></span><br><span class="line">      Y[:, <span class="number">0</span>] = df2</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 数组融合</span></span><br><span class="line">      X = np.hstack((X, Y))</span><br><span class="line"></span><br><span class="line">      <span class="comment">################################################################</span></span><br><span class="line"></span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;数据加载完毕&quot;</span>)</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;开始清洗数据，删除为0的值&quot;</span>)</span><br><span class="line">      <span class="comment"># 创建空列表</span></span><br><span class="line">      delcol = []</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 把空值项加入空列表</span></span><br><span class="line">      <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9000</span>):</span><br><span class="line">          <span class="keyword">if</span> X[i, <span class="number">1</span>] == <span class="number">0</span>:</span><br><span class="line">              delcol.append(i)</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 删除空值项</span></span><br><span class="line">      X = np.delete(X, delcol, axis=<span class="number">0</span>)</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;删除完毕&quot;</span>)</span><br><span class="line"></span><br><span class="line">      <span class="comment">################################################################</span></span><br><span class="line"><span class="comment"># 画图</span></span><br><span class="line">      self.gv_visual_data_content = MyFigureCanvas(width=self.ui.graphicsView.width() / <span class="number">101</span>,</span><br><span class="line">                                                   height=self.ui.graphicsView.height() / <span class="number">101</span>,</span><br><span class="line">                                                   xlim=(<span class="number">0</span>, <span class="number">2</span> * np.pi),</span><br><span class="line">                                                   ylim=(-<span class="number">1</span>, <span class="number">1</span>))  <span class="comment"># 实例化一个FigureCanvas</span></span><br><span class="line"></span><br><span class="line">      self.gv_visual_data_content.axes.clear()  <span class="comment"># 由于图片需要反复绘制，所以每次绘制前清空，然后绘图</span></span><br><span class="line">      <span class="comment"># self.gv_visual_data_content.axes.plot(x, y)</span></span><br><span class="line">      <span class="comment"># self.gv_visual_data_content.axes.set_title(&#x27;频率位置强度&#x27;) # 设置标题</span></span><br><span class="line">      <span class="comment"># self.gv_visual_data_content.draw()  # 刷新画布显示图片，否则不刷新显示</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      self.gv_visual_data_content.axes.set_xlabel(<span class="string">&#x27;频率/Hz&#x27;</span>)</span><br><span class="line">      self.gv_visual_data_content.axes.set_title(<span class="string">&quot;频率/位置/强度图&quot;</span>)</span><br><span class="line">      self.gv_visual_data_content.axes.set_ylabel(<span class="string">&#x27;距艇首距离/m&#x27;</span>)</span><br><span class="line">      self.gv_visual_data_content.axes.scatter(X[:, <span class="number">0</span>], X[:, <span class="number">1</span>], marker=<span class="string">&#x27;.&#x27;</span>, c=X[:, <span class="number">2</span>], vmin=<span class="number">0</span>, vmax=<span class="number">70</span>, cmap=<span class="string">&#x27;jet&#x27;</span>)</span><br><span class="line">      <span class="comment"># 加载的图形（FigureCanvas）不能直接放到graphicview控件中，必须先放到graphicScene，然后再把graphicscene放到graphicview中</span></span><br><span class="line">      <span class="comment"># 即 FigureCanvas -&gt; graphicScene -&gt; graphicview</span></span><br><span class="line">      self.graphic_scene = QGraphicsScene()  <span class="comment"># 创建一个QGraphicsScene</span></span><br><span class="line">      self.graphic_scene.addWidget(self.gv_visual_data_content)  <span class="comment"># 把图形放到QGraphicsScene中，注意：图形是作为一个QWidget放到放到QGraphicsScene中的</span></span><br><span class="line">      self.ui.graphicsView.setScene(self.graphic_scene)  <span class="comment"># 把QGraphicsScene放入QGraphicsView</span></span><br><span class="line">      self.ui.graphicsView.show()  <span class="comment"># 调用show方法呈现图形</span></span><br><span class="line">      <span class="comment"># self.gv_visual_data_content.draw()  # 刷新画布显示图片，否则不刷新显示</span></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p><strong>遇到的坑</strong></p>
+<ol>
+<li>好像有个奇怪的报错，现在没办法触发了，总之就是因为 PyQt5 和 PySide2 的问题，应该统一，不能一会用这个，一会用那个</li>
+<li>重复点击按钮无法重复显示的问题：主要是把<code>实例化一个FigureCanvas</code> 写在了初始化<code>__init__</code>里，导致只能在打开程序时实例化一次，无法重新实例化。解决办法就是放在画图的函数附近即可。</li>
+</ol>
+</blockquote>
+<h3 id="2-6-Axes-画图"><a href="#2-6-Axes-画图" class="headerlink" title="2.6 Axes 画图"></a>2.6 Axes 画图</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1618761">参考文献1</a></p>
+<blockquote>
+<p>之前用 matplotlib 都是用matplotlib.pyplot下的方法，类似 plt.scatter() 这样的写法</p>
+<p>现在因为要嵌入 GraphicsView，要用到 matplotlib 下的 FigureCanvasQTAgg </p>
+<p>需要用 figure 下面的方法，类似于fig.add_subplot() 这样的写法</p>
+<p>现在积累一下新写法。</p>
+</blockquote>
+<p><strong>plt.*<em>*和ax.*</em>*的区别</strong></p>
+<p>我认为所有不先讲清楚plt.<em><strong>和ax.</strong></em> 两种画图方式的区别的教程都是耍流氓。一上来就告诉你，plt.figure(), plt.plot(), plt.show()，这么画就对了的，都是不负责任的表现！</p>
+<p>在matplotlib中，有两种画图方式：</p>
+<p>**plt.figure()**：plt.***系列。通过plt.xxx来画图，其实是取了一个捷径。这是通过matplotlib提供的一个api，这个plt提供了很多基本的function可以让你很快的画出图来，但是如果你想要更细致的精调，就要使用另外一种方法。</p>
+<p><strong>fig, ax &#x3D; plt.subplots():</strong> 这个就是正统的稍微复杂一点的画图方法了。指定figure和axes，然后对axes单独操作。等下就讲figure和axes都神马意思。</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022144903.png" style="zoom: 67%;" />
+
+
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022145303.png" style="zoom: 67%;">
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)   <span class="comment">#一行一列第一个图</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022143436.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.add_subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)  <span class="comment"># 一行两列第二个图</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022143539.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)  <span class="comment"># 两行一列第一个图</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022143757.png"></p>
+<p><strong>查看 ax 下的所有方法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span>(ax01)</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> ，魔术方法 ：<span class="string">&#x27;__class__&#x27;</span>, <span class="string">&#x27;__delattr__&#x27;</span>, <span class="string">&#x27;__dict__&#x27;</span>, <span class="string">&#x27;__dir__&#x27;</span>, <span class="string">&#x27;__doc__&#x27;</span>, <span class="string">&#x27;__eq__&#x27;</span>, <span class="string">&#x27;__format__&#x27;</span>, <span class="string">&#x27;__ge__&#x27;</span>, <span class="string">&#x27;__getattribute__&#x27;</span>, <span class="string">&#x27;__getstate__&#x27;</span>, <span class="string">&#x27;__gt__&#x27;</span>, <span class="string">&#x27;__hash__&#x27;</span>, <span class="string">&#x27;__init__&#x27;</span>, <span class="string">&#x27;__le__&#x27;</span>, <span class="string">&#x27;__lt__&#x27;</span>, <span class="string">&#x27;__module__&#x27;</span>, <span class="string">&#x27;__ne__&#x27;</span>, <span class="string">&#x27;__new__&#x27;</span>, <span class="string">&#x27;__reduce__&#x27;</span>, <span class="string">&#x27;__reduce_ex__&#x27;</span>, <span class="string">&#x27;__repr__&#x27;</span>, <span class="string">&#x27;__setattr__&#x27;</span>, <span class="string">&#x27;__setstate__&#x27;</span>, <span class="string">&#x27;__sizeof__&#x27;</span>, <span class="string">&#x27;__str__&#x27;</span>, <span class="string">&#x27;__subclasshook__&#x27;</span>, <span class="string">&#x27;__weakref__&#x27;</span>, </span><br><span class="line"><span class="number">2</span> ，半魔术 ： <span class="string">&#x27;_add_text&#x27;</span>, <span class="string">&#x27;_adjustable&#x27;</span>, <span class="string">&#x27;_agg_filter&#x27;</span>, <span class="string">&#x27;_alpha&#x27;</span>, <span class="string">&#x27;_anchor&#x27;</span>, <span class="string">&#x27;_animated&#x27;</span>, <span class="string">&#x27;_aspect&#x27;</span>, <span class="string">&#x27;_autoscaleXon&#x27;</span>, <span class="string">&#x27;_autoscaleYon&#x27;</span>, <span class="string">&#x27;_autotitlepos&#x27;</span>, <span class="string">&#x27;_axes&#x27;</span>, <span class="string">&#x27;_axes_class&#x27;</span>, <span class="string">&#x27;_axes_locator&#x27;</span>, <span class="string">&#x27;_axisbelow&#x27;</span>, <span class="string">&#x27;_cachedRenderer&#x27;</span>, <span class="string">&#x27;_clipon&#x27;</span>, <span class="string">&#x27;_clippath&#x27;</span>, <span class="string">&#x27;_connected&#x27;</span>, <span class="string">&#x27;_contains&#x27;</span>, <span class="string">&#x27;_current_image&#x27;</span>, <span class="string">&#x27;_facecolor&#x27;</span>, <span class="string">&#x27;_frameon&#x27;</span>, <span class="string">&#x27;_gci&#x27;</span>, <span class="string">&#x27;_gen_axes_patch&#x27;</span>, <span class="string">&#x27;_gen_axes_spines&#x27;</span>, <span class="string">&#x27;_get_axis_list&#x27;</span>, <span class="string">&#x27;_get_lines&#x27;</span>, <span class="string">&#x27;_get_patches_for_fill&#x27;</span>, <span class="string">&#x27;_get_view&#x27;</span>, <span class="string">&#x27;_gid&#x27;</span>, <span class="string">&#x27;_gridOn&#x27;</span>, <span class="string">&#x27;_hold&#x27;</span>, <span class="string">&#x27;_in_layout&#x27;</span>, <span class="string">&#x27;_init_axis&#x27;</span>, <span class="string">&#x27;_label&#x27;</span>, <span class="string">&#x27;_layoutbox&#x27;</span>, <span class="string">&#x27;_left_title&#x27;</span>, <span class="string">&#x27;_make_twin_axes&#x27;</span>, <span class="string">&#x27;_mouseover&#x27;</span>, <span class="string">&#x27;_mouseover_set&#x27;</span>, <span class="string">&#x27;_navigate&#x27;</span>, <span class="string">&#x27;_navigate_mode&#x27;</span>, <span class="string">&#x27;_oid&#x27;</span>, <span class="string">&#x27;_on_units_changed&#x27;</span>, <span class="string">&#x27;_originalPosition&#x27;</span>, <span class="string">&#x27;_path_effects&#x27;</span>, <span class="string">&#x27;_pcolorargs&#x27;</span>, <span class="string">&#x27;_picker&#x27;</span>, <span class="string">&#x27;_position&#x27;</span>, <span class="string">&#x27;_poslayoutbox&#x27;</span>, <span class="string">&#x27;_process_unit_info&#x27;</span>, <span class="string">&#x27;_prop_order&#x27;</span>, <span class="string">&#x27;_propobservers&#x27;</span>, <span class="string">&#x27;_quiver_units&#x27;</span>, <span class="string">&#x27;_rasterization_zorder&#x27;</span>, <span class="string">&#x27;_rasterized&#x27;</span>, <span class="string">&#x27;_remove_legend&#x27;</span>, <span class="string">&#x27;_remove_method&#x27;</span>, <span class="string">&#x27;_right_title&#x27;</span>, <span class="string">&#x27;_sci&#x27;</span>, <span class="string">&#x27;_set_artist_props&#x27;</span>, <span class="string">&#x27;_set_gc_clip&#x27;</span>, <span class="string">&#x27;_set_lim_and_transforms&#x27;</span>, <span class="string">&#x27;_set_position&#x27;</span>, <span class="string">&#x27;_set_title_offset_trans&#x27;</span>, <span class="string">&#x27;_set_view&#x27;</span>, <span class="string">&#x27;_set_view_from_bbox&#x27;</span>, <span class="string">&#x27;_shared_x_axes&#x27;</span>, <span class="string">&#x27;_shared_y_axes&#x27;</span>, <span class="string">&#x27;_sharex&#x27;</span>, <span class="string">&#x27;_sharey&#x27;</span>, <span class="string">&#x27;_sketch&#x27;</span>, <span class="string">&#x27;_snap&#x27;</span>, <span class="string">&#x27;_stale&#x27;</span>, <span class="string">&#x27;_sticky_edges&#x27;</span>, <span class="string">&#x27;_subplotspec&#x27;</span>, <span class="string">&#x27;_tight&#x27;</span>, <span class="string">&#x27;_transform&#x27;</span>, <span class="string">&#x27;_transformSet&#x27;</span>, <span class="string">&#x27;_twinned_axes&#x27;</span>, <span class="string">&#x27;_update_image_limits&#x27;</span>, <span class="string">&#x27;_update_line_limits&#x27;</span>, <span class="string">&#x27;_update_patch_limits&#x27;</span>, <span class="string">&#x27;_update_title_position&#x27;</span>, <span class="string">&#x27;_update_transScale&#x27;</span>, <span class="string">&#x27;_url&#x27;</span>, <span class="string">&#x27;_use_sticky_edges&#x27;</span>, <span class="string">&#x27;_validate_converted_limits&#x27;</span>, <span class="string">&#x27;_visible&#x27;</span>, <span class="string">&#x27;_xaxis_transform&#x27;</span>, <span class="string">&#x27;_xcid&#x27;</span>, <span class="string">&#x27;_xmargin&#x27;</span>, <span class="string">&#x27;_yaxis_transform&#x27;</span>, <span class="string">&#x27;_ycid&#x27;</span>, <span class="string">&#x27;_ymargin&#x27;</span>, </span><br><span class="line"><span class="number">3</span> ，a 方法 ： <span class="string">&#x27;acorr&#x27;</span>, <span class="string">&#x27;add_artist&#x27;</span>, <span class="string">&#x27;add_callback&#x27;</span>, <span class="string">&#x27;add_child_axes&#x27;</span>, <span class="string">&#x27;add_collection&#x27;</span>, <span class="string">&#x27;add_container&#x27;</span>, <span class="string">&#x27;add_image&#x27;</span>, <span class="string">&#x27;add_line&#x27;</span>, <span class="string">&#x27;add_patch&#x27;</span>, <span class="string">&#x27;add_table&#x27;</span>, <span class="string">&#x27;aname&#x27;</span>, <span class="string">&#x27;angle_spectrum&#x27;</span>, <span class="string">&#x27;annotate&#x27;</span>, <span class="string">&#x27;apply_aspect&#x27;</span>, <span class="string">&#x27;arrow&#x27;</span>, <span class="string">&#x27;artists&#x27;</span>, <span class="string">&#x27;autoscale&#x27;</span>, <span class="string">&#x27;autoscale_view&#x27;</span>, <span class="string">&#x27;axes&#x27;</span>, <span class="string">&#x27;axhline&#x27;</span>, <span class="string">&#x27;axhspan&#x27;</span>, <span class="string">&#x27;axis&#x27;</span>, <span class="string">&#x27;axison&#x27;</span>, <span class="string">&#x27;axvline&#x27;</span>, <span class="string">&#x27;axvspan&#x27;</span>, </span><br><span class="line"><span class="number">4</span> ，b 方法 ： <span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;barbs&#x27;</span>, <span class="string">&#x27;barh&#x27;</span>, <span class="string">&#x27;bbox&#x27;</span>, <span class="string">&#x27;boxplot&#x27;</span>, <span class="string">&#x27;broken_barh&#x27;</span>, <span class="string">&#x27;bxp&#x27;</span>, </span><br><span class="line"><span class="number">5</span> ，c 方法 ： <span class="string">&#x27;callbacks&#x27;</span>, <span class="string">&#x27;can_pan&#x27;</span>, <span class="string">&#x27;can_zoom&#x27;</span>, <span class="string">&#x27;change_geometry&#x27;</span>, <span class="string">&#x27;child_axes&#x27;</span>, <span class="string">&#x27;cla&#x27;</span>, <span class="string">&#x27;clabel&#x27;</span>, <span class="string">&#x27;clear&#x27;</span>, <span class="string">&#x27;clipbox&#x27;</span>, <span class="string">&#x27;cohere&#x27;</span>, <span class="string">&#x27;colNum&#x27;</span>, <span class="string">&#x27;collections&#x27;</span>, <span class="string">&#x27;containers&#x27;</span>, <span class="string">&#x27;contains&#x27;</span>, <span class="string">&#x27;contains_point&#x27;</span>, <span class="string">&#x27;contour&#x27;</span>, <span class="string">&#x27;contourf&#x27;</span>, <span class="string">&#x27;convert_xunits&#x27;</span>, <span class="string">&#x27;convert_yunits&#x27;</span>, <span class="string">&#x27;csd&#x27;</span>, </span><br><span class="line"><span class="number">6</span> ，d 方法 ： <span class="string">&#x27;dataLim&#x27;</span>, <span class="string">&#x27;drag_pan&#x27;</span>, <span class="string">&#x27;draw&#x27;</span>, <span class="string">&#x27;draw_artist&#x27;</span>, </span><br><span class="line"><span class="number">7</span> ，e 方法 ： <span class="string">&#x27;end_pan&#x27;</span>, <span class="string">&#x27;errorbar&#x27;</span>, <span class="string">&#x27;eventplot&#x27;</span>, <span class="string">&#x27;eventson&#x27;</span>, </span><br><span class="line"><span class="number">8</span> ，f 方法 ： <span class="string">&#x27;figbox&#x27;</span>, <span class="string">&#x27;figure&#x27;</span>, <span class="string">&#x27;fill&#x27;</span>, <span class="string">&#x27;fill_between&#x27;</span>, <span class="string">&#x27;fill_betweenx&#x27;</span>, <span class="string">&#x27;findobj&#x27;</span>, <span class="string">&#x27;fmt_xdata&#x27;</span>, <span class="string">&#x27;fmt_ydata&#x27;</span>, <span class="string">&#x27;format_coord&#x27;</span>, <span class="string">&#x27;format_cursor_data&#x27;</span>, <span class="string">&#x27;format_xdata&#x27;</span>, <span class="string">&#x27;format_ydata&#x27;</span>, </span><br><span class="line"><span class="number">9</span> ，g 方法 ： <span class="string">&#x27;get_adjustable&#x27;</span>, <span class="string">&#x27;get_agg_filter&#x27;</span>, <span class="string">&#x27;get_alpha&#x27;</span>, <span class="string">&#x27;get_anchor&#x27;</span>, <span class="string">&#x27;get_animated&#x27;</span>, <span class="string">&#x27;get_aspect&#x27;</span>, <span class="string">&#x27;get_autoscale_on&#x27;</span>, <span class="string">&#x27;get_autoscalex_on&#x27;</span>, <span class="string">&#x27;get_autoscaley_on&#x27;</span>, <span class="string">&#x27;get_axes_locator&#x27;</span>, <span class="string">&#x27;get_axisbelow&#x27;</span>, <span class="string">&#x27;get_children&#x27;</span>, <span class="string">&#x27;get_clip_box&#x27;</span>, <span class="string">&#x27;get_clip_on&#x27;</span>, <span class="string">&#x27;get_clip_path&#x27;</span>, <span class="string">&#x27;get_contains&#x27;</span>, <span class="string">&#x27;get_cursor_data&#x27;</span>, <span class="string">&#x27;get_data_ratio&#x27;</span>, <span class="string">&#x27;get_data_ratio_log&#x27;</span>, <span class="string">&#x27;get_default_bbox_extra_artists&#x27;</span>, <span class="string">&#x27;get_facecolor&#x27;</span>, <span class="string">&#x27;get_fc&#x27;</span>, <span class="string">&#x27;get_figure&#x27;</span>, <span class="string">&#x27;get_frame_on&#x27;</span>, <span class="string">&#x27;get_geometry&#x27;</span>, <span class="string">&#x27;get_gid&#x27;</span>, <span class="string">&#x27;get_gridspec&#x27;</span>, <span class="string">&#x27;get_images&#x27;</span>, <span class="string">&#x27;get_in_layout&#x27;</span>, <span class="string">&#x27;get_label&#x27;</span>, <span class="string">&#x27;get_legend&#x27;</span>, <span class="string">&#x27;get_legend_handles_labels&#x27;</span>, <span class="string">&#x27;get_lines&#x27;</span>, <span class="string">&#x27;get_navigate&#x27;</span>, <span class="string">&#x27;get_navigate_mode&#x27;</span>, <span class="string">&#x27;get_path_effects&#x27;</span>, <span class="string">&#x27;get_picker&#x27;</span>, <span class="string">&#x27;get_position&#x27;</span>, <span class="string">&#x27;get_rasterization_zorder&#x27;</span>, <span class="string">&#x27;get_rasterized&#x27;</span>, <span class="string">&#x27;get_renderer_cache&#x27;</span>, <span class="string">&#x27;get_shared_x_axes&#x27;</span>, <span class="string">&#x27;get_shared_y_axes&#x27;</span>, <span class="string">&#x27;get_sketch_params&#x27;</span>, <span class="string">&#x27;get_snap&#x27;</span>, <span class="string">&#x27;get_subplotspec&#x27;</span>, <span class="string">&#x27;get_tightbbox&#x27;</span>, <span class="string">&#x27;get_title&#x27;</span>, <span class="string">&#x27;get_transform&#x27;</span>, <span class="string">&#x27;get_transformed_clip_path_and_affine&#x27;</span>, <span class="string">&#x27;get_url&#x27;</span>, <span class="string">&#x27;get_visible&#x27;</span>, <span class="string">&#x27;get_window_extent&#x27;</span>, <span class="string">&#x27;get_xaxis&#x27;</span>, <span class="string">&#x27;get_xaxis_text1_transform&#x27;</span>, <span class="string">&#x27;get_xaxis_text2_transform&#x27;</span>, <span class="string">&#x27;get_xaxis_transform&#x27;</span>, <span class="string">&#x27;get_xbound&#x27;</span>, <span class="string">&#x27;get_xgridlines&#x27;</span>, <span class="string">&#x27;get_xlabel&#x27;</span>, <span class="string">&#x27;get_xlim&#x27;</span>, <span class="string">&#x27;get_xmajorticklabels&#x27;</span>, <span class="string">&#x27;get_xminorticklabels&#x27;</span>, <span class="string">&#x27;get_xscale&#x27;</span>, <span class="string">&#x27;get_xticklabels&#x27;</span>, <span class="string">&#x27;get_xticklines&#x27;</span>, <span class="string">&#x27;get_xticks&#x27;</span>, <span class="string">&#x27;get_yaxis&#x27;</span>, <span class="string">&#x27;get_yaxis_text1_transform&#x27;</span>, <span class="string">&#x27;get_yaxis_text2_transform&#x27;</span>, <span class="string">&#x27;get_yaxis_transform&#x27;</span>, <span class="string">&#x27;get_ybound&#x27;</span>, <span class="string">&#x27;get_ygridlines&#x27;</span>, <span class="string">&#x27;get_ylabel&#x27;</span>, <span class="string">&#x27;get_ylim&#x27;</span>, <span class="string">&#x27;get_ymajorticklabels&#x27;</span>, <span class="string">&#x27;get_yminorticklabels&#x27;</span>, <span class="string">&#x27;get_yscale&#x27;</span>, <span class="string">&#x27;get_yticklabels&#x27;</span>, <span class="string">&#x27;get_yticklines&#x27;</span>, <span class="string">&#x27;get_yticks&#x27;</span>, <span class="string">&#x27;get_zorder&#x27;</span>, <span class="string">&#x27;grid&#x27;</span>, </span><br><span class="line"><span class="number">10</span>，h 方法 ： <span class="string">&#x27;has_data&#x27;</span>, <span class="string">&#x27;have_units&#x27;</span>, <span class="string">&#x27;hexbin&#x27;</span>, <span class="string">&#x27;hist&#x27;</span>, <span class="string">&#x27;hist2d&#x27;</span>, <span class="string">&#x27;hitlist&#x27;</span>, <span class="string">&#x27;hlines&#x27;</span>, </span><br><span class="line"><span class="number">11</span>，i 方法 ： <span class="string">&#x27;ignore_existing_data_limits&#x27;</span>, <span class="string">&#x27;images&#x27;</span>, <span class="string">&#x27;imshow&#x27;</span>, <span class="string">&#x27;in_axes&#x27;</span>, <span class="string">&#x27;indicate_inset&#x27;</span>, <span class="string">&#x27;indicate_inset_zoom&#x27;</span>, <span class="string">&#x27;inset_axes&#x27;</span>, <span class="string">&#x27;invert_xaxis&#x27;</span>, <span class="string">&#x27;invert_yaxis&#x27;</span>, <span class="string">&#x27;is_figure_set&#x27;</span>, <span class="string">&#x27;is_first_col&#x27;</span>, <span class="string">&#x27;is_first_row&#x27;</span>, <span class="string">&#x27;is_last_col&#x27;</span>, <span class="string">&#x27;is_last_row&#x27;</span>, <span class="string">&#x27;is_transform_set&#x27;</span>, </span><br><span class="line"><span class="number">12</span>，l 方法 ： <span class="string">&#x27;label_outer&#x27;</span>, <span class="string">&#x27;legend&#x27;</span>, <span class="string">&#x27;legend_&#x27;</span>, <span class="string">&#x27;lines&#x27;</span>, <span class="string">&#x27;locator_params&#x27;</span>, <span class="string">&#x27;loglog&#x27;</span>, </span><br><span class="line"><span class="number">13</span>，m 方法 ： <span class="string">&#x27;magnitude_spectrum&#x27;</span>, <span class="string">&#x27;margins&#x27;</span>, <span class="string">&#x27;matshow&#x27;</span>, <span class="string">&#x27;minorticks_off&#x27;</span>, <span class="string">&#x27;minorticks_on&#x27;</span>, <span class="string">&#x27;mouseover&#x27;</span>, <span class="string">&#x27;mouseover_set&#x27;</span>, </span><br><span class="line"><span class="number">14</span>，n 方法 ： <span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;numCols&#x27;</span>, <span class="string">&#x27;numRows&#x27;</span>, </span><br><span class="line"><span class="number">15</span>，p 方法 ： <span class="string">&#x27;patch&#x27;</span>, <span class="string">&#x27;patches&#x27;</span>, <span class="string">&#x27;pchanged&#x27;</span>, <span class="string">&#x27;pcolor&#x27;</span>, <span class="string">&#x27;pcolorfast&#x27;</span>, <span class="string">&#x27;pcolormesh&#x27;</span>, <span class="string">&#x27;phase_spectrum&#x27;</span>, <span class="string">&#x27;pick&#x27;</span>, <span class="string">&#x27;pickable&#x27;</span>, <span class="string">&#x27;pie&#x27;</span>, <span class="string">&#x27;plot&#x27;</span>, <span class="string">&#x27;plot_date&#x27;</span>, <span class="string">&#x27;properties&#x27;</span>, <span class="string">&#x27;psd&#x27;</span>, </span><br><span class="line"><span class="number">16</span> ，q 方法 ：<span class="string">&#x27;quiver&#x27;</span>, <span class="string">&#x27;quiverkey&#x27;</span>, </span><br><span class="line"><span class="number">17</span> ，r 方法 ：<span class="string">&#x27;redraw_in_frame&#x27;</span>, <span class="string">&#x27;relim&#x27;</span>, <span class="string">&#x27;remove&#x27;</span>, <span class="string">&#x27;remove_callback&#x27;</span>, <span class="string">&#x27;reset_position&#x27;</span>, <span class="string">&#x27;rowNum&#x27;</span>, </span><br><span class="line"><span class="number">18</span> ，s 方法 ：<span class="string">&#x27;scatter&#x27;</span>, <span class="string">&#x27;semilogx&#x27;</span>, <span class="string">&#x27;semilogy&#x27;</span>, <span class="string">&#x27;specgram&#x27;</span>, <span class="string">&#x27;spines&#x27;</span>, <span class="string">&#x27;spy&#x27;</span>, <span class="string">&#x27;stackplot&#x27;</span>, <span class="string">&#x27;stale&#x27;</span>, <span class="string">&#x27;stale_callback&#x27;</span>, <span class="string">&#x27;start_pan&#x27;</span>, <span class="string">&#x27;stem&#x27;</span>, <span class="string">&#x27;step&#x27;</span>, <span class="string">&#x27;sticky_edges&#x27;</span>, <span class="string">&#x27;streamplot&#x27;</span>, </span><br><span class="line"><span class="number">19</span> ，<span class="built_in">set</span> 方法 ：<span class="string">&#x27;set&#x27;</span>, <span class="string">&#x27;set_adjustable&#x27;</span>, <span class="string">&#x27;set_agg_filter&#x27;</span>, <span class="string">&#x27;set_alpha&#x27;</span>, <span class="string">&#x27;set_anchor&#x27;</span>,</span><br><span class="line">		 <span class="string">&#x27;set_animated&#x27;</span>, <span class="string">&#x27;set_aspect&#x27;</span>, <span class="string">&#x27;set_autoscale_on&#x27;</span>, <span class="string">&#x27;set_autoscalex_on&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_autoscaley_on&#x27;</span>, <span class="string">&#x27;set_axes_locator&#x27;</span>, <span class="string">&#x27;set_axis_off&#x27;</span>, <span class="string">&#x27;set_axis_on&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_axisbelow&#x27;</span>, <span class="string">&#x27;set_clip_box&#x27;</span>, <span class="string">&#x27;set_clip_on&#x27;</span>, <span class="string">&#x27;set_clip_path&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_contains&#x27;</span>, <span class="string">&#x27;set_facecolor&#x27;</span>, <span class="string">&#x27;set_fc&#x27;</span>, <span class="string">&#x27;set_figure&#x27;</span>, <span class="string">&#x27;set_frame_on&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_gid&#x27;</span>, <span class="string">&#x27;set_in_layout&#x27;</span>, <span class="string">&#x27;set_label&#x27;</span>, <span class="string">&#x27;set_navigate&#x27;</span>, <span class="string">&#x27;set_navigate_mode&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_path_effects&#x27;</span>, <span class="string">&#x27;set_picker&#x27;</span>, <span class="string">&#x27;set_position&#x27;</span>, <span class="string">&#x27;set_prop_cycle&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_rasterization_zorder&#x27;</span>, <span class="string">&#x27;set_rasterized&#x27;</span>, <span class="string">&#x27;set_sketch_params&#x27;</span>, <span class="string">&#x27;set_snap&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_subplotspec&#x27;</span>, <span class="string">&#x27;set_title&#x27;</span>, <span class="string">&#x27;set_transform&#x27;</span>, <span class="string">&#x27;set_url&#x27;</span>, <span class="string">&#x27;set_visible&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_xbound&#x27;</span>, <span class="string">&#x27;set_xlabel&#x27;</span>, <span class="string">&#x27;set_xlim&#x27;</span>, <span class="string">&#x27;set_xmargin&#x27;</span>, <span class="string">&#x27;set_xscale&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_xticklabels&#x27;</span>, <span class="string">&#x27;set_xticks&#x27;</span>, <span class="string">&#x27;set_ybound&#x27;</span>, <span class="string">&#x27;set_ylabel&#x27;</span>, <span class="string">&#x27;set_ylim&#x27;</span>, </span><br><span class="line">		 <span class="string">&#x27;set_ymargin&#x27;</span>, <span class="string">&#x27;set_yscale&#x27;</span>, <span class="string">&#x27;set_yticklabels&#x27;</span>, <span class="string">&#x27;set_yticks&#x27;</span>, <span class="string">&#x27;set_zorder&#x27;</span>, </span><br><span class="line"><span class="number">20</span>，t 方法 ：<span class="string">&#x27;table&#x27;</span>, <span class="string">&#x27;tables&#x27;</span>, <span class="string">&#x27;text&#x27;</span>, <span class="string">&#x27;texts&#x27;</span>, <span class="string">&#x27;tick_params&#x27;</span>, <span class="string">&#x27;ticklabel_format&#x27;</span>, <span class="string">&#x27;title&#x27;</span>, <span class="string">&#x27;titleOffsetTrans&#x27;</span>, <span class="string">&#x27;transAxes&#x27;</span>, <span class="string">&#x27;transData&#x27;</span>, <span class="string">&#x27;transLimits&#x27;</span>, <span class="string">&#x27;transScale&#x27;</span>, <span class="string">&#x27;tricontour&#x27;</span>, <span class="string">&#x27;tricontourf&#x27;</span>, <span class="string">&#x27;tripcolor&#x27;</span>, <span class="string">&#x27;triplot&#x27;</span>, <span class="string">&#x27;twinx&#x27;</span>, <span class="string">&#x27;twiny&#x27;</span>, </span><br><span class="line"><span class="number">21</span>，u 方法 ：<span class="string">&#x27;update&#x27;</span>, <span class="string">&#x27;update_datalim&#x27;</span>, <span class="string">&#x27;update_datalim_bounds&#x27;</span>, <span class="string">&#x27;update_from&#x27;</span>, <span class="string">&#x27;update_params&#x27;</span>, <span class="string">&#x27;use_sticky_edges&#x27;</span>, </span><br><span class="line"><span class="number">22</span>，v 方法 ： <span class="string">&#x27;viewLim&#x27;</span>, <span class="string">&#x27;violin&#x27;</span>, <span class="string">&#x27;violinplot&#x27;</span>, <span class="string">&#x27;vlines&#x27;</span>, </span><br><span class="line"><span class="number">23</span>，x 方法 ： <span class="string">&#x27;xaxis&#x27;</span>, <span class="string">&#x27;xaxis_date&#x27;</span>, <span class="string">&#x27;xaxis_inverted&#x27;</span>, <span class="string">&#x27;xcorr&#x27;</span>, </span><br><span class="line"><span class="number">24</span>，y 方法 ： <span class="string">&#x27;yaxis&#x27;</span>, <span class="string">&#x27;yaxis_date&#x27;</span>, <span class="string">&#x27;yaxis_inverted&#x27;</span>, </span><br><span class="line"><span class="number">25</span>，z 方法 ： <span class="string">&#x27;zorder&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="给子图画-colorbar"><a href="#给子图画-colorbar" class="headerlink" title="给子图画 colorbar"></a><strong>给子图画 colorbar</strong></h4><p><a target="_blank" rel="noopener" href="https://zhajiman.github.io/post/matplotlib_colorbar/">参数详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d97c1d2e274f">例子解释</a></p>
+<p>Colorbar 主要通过 <code>figure.Figure.colorbar</code> 方法绘制，先介绍常用的几个参数</p>
+<ul>
+<li><code>mappable</code>：直译为“可映射的”，要求是 <code>matplotlib.cm.ScalarMappable</code> 对象，能够向 colorbar 提供数据与颜色间的映射关系（即 colormap 和 normalization 信息）。主图中使用 <code>contourf</code>、<code>pcolormesh</code> 和 <code>imshow</code> 等二维绘图函数时返回的对象都是 <code>ScalarMappable</code> 的子类。</li>
+<li><code>cax</code>：colorbar 本质上也是一种特殊的 <code>Axes</code>，我们为了在画布上决定其位置、形状和大小，可以事先画出一个空 <code>Axes</code>，然后将这个 <code>Axes</code> 提供给 <code>cax</code> 参数，那么这个空 <code>Axes</code> 就会变成 colorbar。</li>
+<li><code>ax</code>：有时我们懒得手动为 colorbar 准备好位置，那么可以用 <code>ax</code> 参数指定 colorbar 依附于哪个 <code>Axes</code>，接着 colorbar 会自动从这个 <code>Axes</code> 里“偷”一部分空间来作为自己的空间。</li>
+<li><code>orientation</code>：指定 colorbar 的朝向，默认为垂直方向。类似的参数还有 <code>location</code>。</li>
+<li><code>extend</code>：设置是否在 colorbar 两端额外标出归一化范围外的颜色。如果 colormap 有设置过 <code>set_under</code> 和 <code>set_over</code>，那么使用这两个颜色。</li>
+<li><code>ticks</code>：指定 colorbar 的刻度位置，可以接受数值序列或 <code>Locator</code> 对象。</li>
+<li><code>format</code>：指定 colorbar 的刻度标签的格式，可以接受格式字符串，例如 <code>&#39;%.3f&#39;</code>，或 <code>Formatter</code> 对象。</li>
+<li><code>label</code>：整个 colorbar 的标签，类似于 <code>Axes</code> 的 <code>xlabel</code> 和 <code>ylabel</code>。</li>
+</ul>
+<p>此外 colorbar 还有些设置不能在初始化的时候一次性搞定，需要接着调用方法才能完成。</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221022164343.png" style="zoom: 80%;">
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原型</span></span><br><span class="line">plt.Figure.colorbar(self, mappable, cax=<span class="literal">None</span>, ax=<span class="literal">None</span>, use_gridspec=<span class="literal">True</span>, **kw)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用法</span></span><br><span class="line">colorbar(**kwargs)</span><br><span class="line">colorbar(mappable, **kwargs)</span><br><span class="line">colorbar(mappable, cax=cax, **kwargs)</span><br><span class="line">colorbar(mappable, ax=ax, **kwargs)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>其中第一种用在没有子图的时候，也就是<code>plt.colorbar()</code>可以不用输入参数</p>
+</li>
+<li><p>后面三个一般用在有子图的时候，<strong>这里有一个必须的参数<code>mappable</code></strong></p>
+</li>
+<li><p>参数<code>mappable</code>理解起来就是我们需要提供一个可以映射颜色的对象，这个对象就是我们作的图</p>
+</li>
+<li><p>所以例子中6、7行我们需要获取这两个子图对象，然后将其传给<code>colorbar()</code>，<code>colorbar</code>则会获取这个图所用的渐变颜色种类，之后的一个参数<code>ax</code>用来指示<code>colorbar()</code>获取到的渐变色条在哪里显示，我们设置<code>ax=ax[0]</code>那它就在<code>ax[0]</code>的区域显示，我们也可以改变渐变色条出现的位置，请对比下面和上面的区别：</p>
+</li>
+</ul>
+<h3 id="2-7-文本框获取文件-x2F-文件夹"><a href="#2-7-文本框获取文件-x2F-文件夹" class="headerlink" title="2.7 文本框获取文件&#x2F;文件夹"></a>2.7 文本框获取文件&#x2F;文件夹</h3><p><strong>选择目录</strong></p>
+<p>通过 <code>getExistingDirectory 静态方法</code> 选择目录。</p>
+<p>该方法，第一个参数是父窗口对象，第二个参数是选择框显示的标题。</p>
+<p>比如</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PySide2.QtWidgets <span class="keyword">import</span> QFileDialog</span><br><span class="line"></span><br><span class="line">filePath = QFileDialog.getExistingDirectory(self.ui, <span class="string">&quot;选择存储路径&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>返回值即为选择的路径字符串。</p>
+<p>如果用户点击了 选择框的 取消选择按钮，返回 空字符串。</p>
+<p><strong>选择已存在文件</strong></p>
+<p>如果你想弹出文件选择框，选择一个 <code>已经存在</code> 的文件，可以使用 QFileDialog 静态方法 <code>getOpenFileName</code> ，比如</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PySide2.QtWidgets <span class="keyword">import</span> QFileDialog</span><br><span class="line"></span><br><span class="line">filePath, _  = QFileDialog.getOpenFileName(</span><br><span class="line">            self.ui,             <span class="comment"># 父窗口对象</span></span><br><span class="line">            <span class="string">&quot;选择你要上传的图片&quot;</span>, <span class="comment"># 标题</span></span><br><span class="line">            <span class="string">r&quot;d:\\data&quot;</span>,        <span class="comment"># 起始目录</span></span><br><span class="line">            <span class="string">&quot;图片类型 (*.png *.jpg *.bmp)&quot;</span> <span class="comment"># 选择类型过滤项，过滤内容在括号中</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+
+<p>该方法返回值 是一个元组，第一个元素是选择的文件路径，第二个元素是文件类型，如果你只想获取文件路径即可，可以采用上面的代码写法。</p>
+<p>如果用户点击了 选择框的 取消选择按钮，返回 空字符串。</p>
+<p><strong>选择保存文件路径</strong></p>
+<p>如果你想弹出文件选择框，选择路径和文件名，来 <code>保存一个文件</code> ，可以使用 QFileDialog 静态方法 <code>getSaveFileName</code> ，比如</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PySide2.QtWidgets <span class="keyword">import</span> QFileDialog</span><br><span class="line"></span><br><span class="line">filePath, _  = QFileDialog.getSaveFileName(</span><br><span class="line">            self.ui,             <span class="comment"># 父窗口对象</span></span><br><span class="line">            <span class="string">&quot;保存文件&quot;</span>, <span class="comment"># 标题</span></span><br><span class="line">            <span class="string">r&quot;d:\\data&quot;</span>,        <span class="comment"># 起始目录</span></span><br><span class="line">            <span class="string">&quot;json类型 (*.json)&quot;</span> <span class="comment"># 选择类型过滤项，过滤内容在括号中</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+
+<p><strong>选择多个文件</strong></p>
+<p>如果要选择多个文件，使用 <code>getOpenFileNames 静态方法</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PySide2.QtWidgets <span class="keyword">import</span> QFileDialog</span><br><span class="line"></span><br><span class="line">filePaths, _  = QFileDialog.getOpenFileNames(</span><br><span class="line">            self.ui,             <span class="comment"># 父窗口对象</span></span><br><span class="line">            <span class="string">&quot;选择你要上传的图片&quot;</span>, <span class="comment"># 标题</span></span><br><span class="line">            <span class="string">r&quot;d:\\data&quot;</span>,        <span class="comment"># 起始目录</span></span><br><span class="line">            <span class="string">&quot;图片类型 (*.png *.jpg *.bmp)&quot;</span> <span class="comment"># 选择类型过滤项，过滤内容在括号中</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+
+<p>上例中 filePaths 对应的返回值是一个列表，里面包含了选择的文件。</p>
+<p>如果用户点击了 选择框的 取消选择按钮，返回 空列表。</p>
+<h3 id="2-8-封装相似功能的方法"><a href="#2-8-封装相似功能的方法" class="headerlink" title="2.8 封装相似功能的方法"></a>2.8 封装相似功能的方法</h3><blockquote>
+<p>比如<code>浏览</code>找到<code>文件夹</code>，其实只需要知道 将获取到的内容放入哪个 <code>textlabel</code>即可，但是问题是如何将<code>参数内容</code> 作为 <code>方法名之一</code> ？</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221023103949.png" style="zoom: 67%;">
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span>()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221023105153.png" style="zoom: 67%;">
+
+<p>解决<code>用变量内容代替方法名后又出现了新的问题：</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.ui.tab1_browse_filepass_button.clicked.connect(self.filepass_browse(<span class="string">&quot;tab1_browse_filepass_text&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>程序会在初始化时直接运行这个！！不管你点不点击，就很烦</p>
+<p>因为正常的写法是不加括号的比如下面这样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.ui.tab1_browse_savepass_button.clicked.connect(self.tab1_savepass_browse)</span><br></pre></td></tr></table></figure>
+
+<p>那怎么传递额外参数呢？查了资料后发现了<code>lambda表达式</code></p>
+<p>用法就是在带括号的方法前加上<code>lambda:</code>就行，比如下面这样</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221023113313.png" style="zoom: 67%;">
+
+<p>问题解决！</p>
+<p>但是为什么这样？目前还没看懂</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/fengyu09/article/details/39498777">参考文献</a></p>
+<p>使用Pyqt编程过程中，经常会遇到给槽函数传递额外参数的情况。但是信号-槽机制只是指定信号如何连接到槽，信号定义的参数被传递给槽，而额外的参数（用户定义）不能直接传递。</p>
+<p>而传递额外参数又是很有用处。你可能使用一个槽处理多个组件的信号，有时要传递额外的信息。</p>
+<p>一种方法是使用<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=lambda&spm=1001.2101.3001.7020">lambda</a>表达式。</p>
+<p>解释一下，on_button是怎样处理从两个按钮传来的信号。我们使用lambda传递按钮数字给槽，也可以传递任何其他东西—甚至是按钮组件本身（假如，槽打算把传递信号的按钮修改为不可用）</p>
+<p>第2个方法是使用functools里的partial函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">button1.clicked.connect(partial(self.on_button, <span class="number">1</span>))</span><br><span class="line">button2.clicked.connect(partial(self.on_button, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>哪个办法好一点？这个属于风格的问题。个人观点，喜欢lambda，条理清楚，而且灵活。</p>
+</blockquote>
+<h3 id="2-9-清空-graphicsView"><a href="#2-9-清空-graphicsView" class="headerlink" title="2.9 清空 graphicsView"></a>2.9 清空 graphicsView</h3><blockquote>
+<p>没找到方法</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/59d09abe2e91fa9c3dd5c6942478dde.png" style="zoom: 67%;">
+
+<h3 id="2-10-保存graphicsView生成的图片"><a href="#2-10-保存graphicsView生成的图片" class="headerlink" title="2.10 保存graphicsView生成的图片"></a>2.10 保存graphicsView生成的图片</h3><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/51e9966a3eeb061c6d5906540e4ca2c.png" style="zoom: 67%;">
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">m_image.save(pictrureName, “JPG”, <span class="number">100</span>);</span><br><span class="line">对于这三个参数，解释如下：</span><br><span class="line"><span class="number">1.</span>pictrureName为图片文件的路径，比如：<span class="string">&quot;/home/feng/IMG_0.jpg&quot;</span>，需要注意的是路径必须要有权限读写；</span><br><span class="line"><span class="number">2.</span><span class="string">&quot;JPG&quot;</span>为图片的格式，注意不需要带<span class="string">&quot;.&quot;</span>；</span><br><span class="line"><span class="number">3.100</span>指的是图片的质量因数，范围必须在<span class="number">0</span>到<span class="number">100</span>之内或-<span class="number">1</span>，指定<span class="number">0</span>以获取小型压缩文件，指定<span class="number">100</span>表示大型未压缩文件，使用-<span class="number">1</span>（默认值）使用默认设置。</span><br></pre></td></tr></table></figure>
+
+<p>遇到问题，jpg不可以生成文件，png可以生成文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">pixmap = QPixmap(self.chartview_.sceneRect().size().toSize())</span><br><span class="line">pixmap.fill(QColor(<span class="string">&quot;transparent&quot;</span>))</span><br><span class="line"></span><br><span class="line">painter = QPainter(pixmap)</span><br><span class="line">painter.setRenderHint(QPainter.Antialiasing)</span><br><span class="line"></span><br><span class="line">self.chartview_.render(painter)</span><br><span class="line">painter.end()</span><br><span class="line"></span><br><span class="line">pixmap.save(<span class="string">&quot;image.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-11-设置QLineEdit只允许输入数字"><a href="#2-11-设置QLineEdit只允许输入数字" class="headerlink" title="2.11 设置QLineEdit只允许输入数字"></a>2.11 设置QLineEdit只允许输入数字</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">self.regExp1 = QtCore.QRegExp(<span class="string">&#x27;^\d&#123;1,1&#125;\$&#x27;</span>)  <span class="comment"># 设置校验-只允许输入1位数字</span></span><br><span class="line">self.ui.tab2_1_num_input_text.setValidator(QtGui.QRegExpValidator(self.regExp1))</span><br><span class="line"></span><br><span class="line">self.regExp3 = QtCore.QRegExp(<span class="string">&#x27;^\d&#123;1,3&#125;\$&#x27;</span>)  <span class="comment"># 设置校验-只允许输入1位数字</span></span><br><span class="line">self.ui.tab2_1_num_input_text.setValidator(QtGui.QRegExpValidator(self.regExp3))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-12-numpy-数组排序"><a href="#2-12-numpy-数组排序" class="headerlink" title="2.12 numpy 数组排序"></a>2.12 numpy 数组排序</h3><p>二维数组排序</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110321.png" style="zoom: 67%;">
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110331.png" style="zoom: 67%;">
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 按照第一列排序，与之对应的其他列相应变化</span></span><br><span class="line">a[np.argsort(a[:,<span class="number">0</span>])]</span><br></pre></td></tr></table></figure>
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110641.png" style="zoom: 67%;">
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 按照第二列排序，与之对应的其他列相应变化</span></span><br><span class="line">a[np.argsort(a[:,<span class="number">1</span>])]</span><br></pre></td></tr></table></figure>
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20221027110629.png" style="zoom: 67%;">
+
+<h3 id="2-13-绘制盒图"><a href="#2-13-绘制盒图" class="headerlink" title="2.13 绘制盒图"></a>2.13 绘制盒图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">plt.boxplot(x, notch=<span class="literal">None</span>, sym=<span class="literal">None</span>, vert=<span class="literal">None</span>,</span><br><span class="line">            whis=<span class="literal">None</span>, positions=<span class="literal">None</span>, widths=<span class="literal">None</span>,</span><br><span class="line">            patch_artist=<span class="literal">None</span>, meanline=<span class="literal">None</span>, showmeans=<span class="literal">None</span>,</span><br><span class="line">            showcaps=<span class="literal">None</span>, showbox=<span class="literal">None</span>, showfliers=<span class="literal">None</span>,</span><br><span class="line">            boxprops=<span class="literal">None</span>, labels=<span class="literal">None</span>, flierprops=<span class="literal">None</span>,</span><br><span class="line">            medianprops=<span class="literal">None</span>, meanprops=<span class="literal">None</span>,</span><br><span class="line">            capprops=<span class="literal">None</span>, whiskerprops=<span class="literal">None</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>● <strong>x</strong> ：绘图数据。</p>
+<p>● <strong>notch</strong> ：是否以凹口的形式展现箱线图，默认非凹口。</p>
+<p>● <strong>sym</strong>：指定异常点的形状，默认为＋号显示。</p>
+<p>● <strong>vert</strong> ：是否需要将箱线图垂直放，默认垂直放。</p>
+<p>● <strong>whis</strong> ：指定上下须与上下四分位的距离，默认为1.5倍的四分位差。</p>
+<p>● <strong>positions</strong> ：指定箱线图位置，默认为［0,1,2.&amp;hellip;]。</p>
+<p>● <strong>widths</strong> ：指定箱线图宽度，默认为0.5。</p>
+<p>● <strong>patch _ artist</strong> ：是否填充箱体的颜色。</p>
+<p>● <strong>meanline</strong> ：是否用线的形式表示均值，默认用点表示。</p>
+<p>● <strong>showmeans</strong> ：是否显示均值，默认不显示。</p>
+<p>● <strong>showcaps</strong> ：是否显示箱线图顶端和末端两条线，默认显示。</p>
+<p>● <strong>showbox</strong> ：是否显示箱线图的箱体，默认显示。</p>
+<p>● <strong>showfliers</strong> ：是否显示异常值，默认显示。</p>
+<p>● <strong>boxprops</strong> ：设置箱体的属性，如边框色、填充色等。</p>
+<p>● <strong>labels</strong> ：为箱线图添加标签，类似于图例的作用。</p>
+<p>● <strong>filerprops</strong> ：设置异常值的属性，如异常点的形状、大小、填充色等。</p>
+<p>● <strong>medianprops</strong> :设置中位数的属性，如线的类型、粗细等。</p>
+<p>● <strong>meanprops</strong> :设置均值的属性，如点的大小、颜色等。</p>
+<p>● <strong>capprops</strong> ：设置箱线图顶端和末端线条的属性，如颜色、粗细等。</p>
+<p>● <strong>whiskerprops</strong> ：设置须的属性，如颜色、粗细、线的类型等。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.array([<span class="number">12</span>, <span class="number">45</span>, <span class="number">30</span>, <span class="number">70</span>, <span class="number">36</span>, <span class="number">50</span>, <span class="number">40</span>, <span class="number">26</span>, <span class="number">38</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(x))</span><br><span class="line">a = np.quantile(x, <span class="number">0.75</span>)  <span class="comment"># 上四分之一数</span></span><br><span class="line">b = np.quantile(x, <span class="number">0.25</span>)  <span class="comment"># 下四分之一数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;平均数：&quot;</span>, np.mean(x))  <span class="comment"># 打印均值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;中位数：&quot;</span>, np.median(x))  <span class="comment"># 打印中位数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;上四分之一数：&quot;</span>, a)  <span class="comment"># 打印上四分之一数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;下四分之一数：&quot;</span>, b)  <span class="comment"># 打印下四分之一数</span></span><br><span class="line">up = a + <span class="number">1.5</span> * (a - b)  <span class="comment"># 异常值判断标准</span></span><br><span class="line">down = b - <span class="number">1.5</span> * (a - b)  <span class="comment"># 异常值判断标准</span></span><br><span class="line">x = np.sort(x)  <span class="comment"># 对原始数据排序</span></span><br><span class="line">shangjie = x[x &lt; up][-<span class="number">1</span>]  <span class="comment"># 除了异常值外的最大值</span></span><br><span class="line">xiajie = x[x &gt; down][<span class="number">0</span>]  <span class="comment"># 除了异常值外的最小值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;上界：&quot;</span>, shangjie)  <span class="comment"># 打印上界</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;up:&quot;</span>, up)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;down:&quot;</span>, down)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;下界：&quot;</span>, xiajie)  <span class="comment"># 打印下界</span></span><br><span class="line">plt.grid(<span class="literal">True</span>)  <span class="comment"># 显示网格</span></span><br><span class="line">y = plt.boxplot(x, meanline=<span class="literal">True</span>, showmeans=<span class="literal">True</span>,</span><br><span class="line">                flierprops=&#123;<span class="string">&quot;marker&quot;</span>: <span class="string">&quot;o&quot;</span>, <span class="string">&quot;markerfacecolor&quot;</span>: <span class="string">&quot;red&quot;</span>, <span class="string">&quot;markersize&quot;</span>: <span class="number">15</span>&#125;)  <span class="comment"># 绘制箱形图，设置异常点大小、样式等</span></span><br><span class="line">plt.show()  <span class="comment"># 显示图</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-14-加入文本框"><a href="#2-14-加入文本框" class="headerlink" title="2.14 加入文本框"></a>2.14 加入文本框</h3><p><code>QTextBrowser</code> 是 <code>只能查看文本</code> 控件。通常用来显示一些操作日志信息、或者不需要用户编辑的大段文本内容。</p>
+<p><strong>在末尾添加文本</strong></p>
+<p>通过 <code>append</code> 方法在编辑框末尾添加文本内容，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">textBrowser.append(<span class="string">&#x27;你好，世界&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>有时，浏览框里面的内容长度超出了可见范围，我们在末尾添加了内容，往往希望控件自动翻滚到当前添加的这行，</p>
+<p>可以通过 <code>ensureCursorVisible</code> 方法来实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">textBrowser.append(<span class="string">&#x27;你好，世界&#x27;</span>)</span><br><span class="line">textBrowser.ensureCursorVisible()</span><br></pre></td></tr></table></figure>
+
+<p>注意：这种方法会在添加文本后 <code>自动换行</code></p>
+<p><strong>在光标处插入文本</strong></p>
+<p>通过 <code>insertPlainText</code> 方法在编辑框末尾添加文本内容，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">edit.insertPlainText(<span class="string">&#x27;你好，世界&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注意：这种方法 <code>不会</code> 在添加文本后自动换行</p>
 
       
 
@@ -404,6 +644,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PySide2</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Axes</a>
         		</li>
       		
 		</ul>
@@ -511,7 +755,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">一、工具使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-pyqt-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">1 pyqt 的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-pyqt%E5%B7%A5%E5%85%B7%E5%9C%A8PyCharm%E4%B8%AD%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">2 pyqt工具在PyCharm中的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-Qt-Designer"><span class="toc-number">4.</span> <span class="toc-text">3  使用 Qt Designer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-ui-%E8%BD%AC%E6%8D%A2%E4%B8%BA-py"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 .ui 转换为 .py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%9B%9B%E7%A7%8D%E5%B8%83%E5%B1%80"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 四种布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%B8%BB%E7%AA%97%E5%8F%A3"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 主窗口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">二、开发过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%95%8C%E9%9D%A2%E4%BB%A3%E7%A0%81%E9%80%BB%E8%BE%91"><span class="toc-number">5.1.</span> <span class="toc-text">2.1 界面代码逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="toc-number">5.2.</span> <span class="toc-text">2.2 进度条</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%97%B6%E9%97%B4%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6"><span class="toc-number">5.3.</span> <span class="toc-text">2.3 时间命名文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text">2.4 打包可执行文件</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">一、工具使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-pyqt-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">1 pyqt 的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-pyqt%E5%B7%A5%E5%85%B7%E5%9C%A8PyCharm%E4%B8%AD%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">2 pyqt工具在PyCharm中的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-Qt-Designer"><span class="toc-number">4.</span> <span class="toc-text">3  使用 Qt Designer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-ui-%E8%BD%AC%E6%8D%A2%E4%B8%BA-py"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 .ui 转换为 .py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%9B%9B%E7%A7%8D%E5%B8%83%E5%B1%80"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 四种布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%B8%BB%E7%AA%97%E5%8F%A3"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 主窗口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">二、开发过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%95%8C%E9%9D%A2%E4%BB%A3%E7%A0%81%E9%80%BB%E8%BE%91"><span class="toc-number">5.1.</span> <span class="toc-text">2.1 界面代码逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="toc-number">5.2.</span> <span class="toc-text">2.2 进度条</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%97%B6%E9%97%B4%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6"><span class="toc-number">5.3.</span> <span class="toc-text">2.3 时间命名文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%89%93%E5%8C%85%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text">2.4 打包可执行文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%B5%8C%E5%85%A5Matplotlib"><span class="toc-number">5.5.</span> <span class="toc-text">2.5 嵌入Matplotlib</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-Axes-%E7%94%BB%E5%9B%BE"><span class="toc-number">5.6.</span> <span class="toc-text">2.6 Axes 画图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E5%AD%90%E5%9B%BE%E7%94%BB-colorbar"><span class="toc-number">5.6.1.</span> <span class="toc-text">给子图画 colorbar</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-%E6%96%87%E6%9C%AC%E6%A1%86%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6-x2F-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">5.7.</span> <span class="toc-text">2.7 文本框获取文件&#x2F;文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-%E5%B0%81%E8%A3%85%E7%9B%B8%E4%BC%BC%E5%8A%9F%E8%83%BD%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">5.8.</span> <span class="toc-text">2.8 封装相似功能的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-%E6%B8%85%E7%A9%BA-graphicsView"><span class="toc-number">5.9.</span> <span class="toc-text">2.9 清空 graphicsView</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-10-%E4%BF%9D%E5%AD%98graphicsView%E7%94%9F%E6%88%90%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-number">5.10.</span> <span class="toc-text">2.10 保存graphicsView生成的图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-11-%E8%AE%BE%E7%BD%AEQLineEdit%E5%8F%AA%E5%85%81%E8%AE%B8%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97"><span class="toc-number">5.11.</span> <span class="toc-text">2.11 设置QLineEdit只允许输入数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-12-numpy-%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-number">5.12.</span> <span class="toc-text">2.12 numpy 数组排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-13-%E7%BB%98%E5%88%B6%E7%9B%92%E5%9B%BE"><span class="toc-number">5.13.</span> <span class="toc-text">2.13 绘制盒图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-14-%E5%8A%A0%E5%85%A5%E6%96%87%E6%9C%AC%E6%A1%86"><span class="toc-number">5.14.</span> <span class="toc-text">2.14 加入文本框</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -681,11 +925,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">工具使用教程</a>
+                <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color1">Matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">工具使用教程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -701,15 +953,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习日记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Matplotlib</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color1">PyQt5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PySide2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Axes</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -733,23 +993,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习日记</a>
+                <a href="javascript:void(0)" class="js-tag color5">正向传播</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">反向传播</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">PyQt5</a>
+                <a href="javascript:void(0)" class="js-tag color5">梯度下降</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PySide2</a>
+                <a href="javascript:void(0)" class="js-tag color2">torch.optim</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
+                <a href="javascript:void(0)" class="js-tag color2">TensorBoard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">autograd</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">回溯机制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">动态计算图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -774,38 +1050,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">pyplot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">正向传播</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">反向传播</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">梯度下降</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">torch.optim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TensorBoard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">autograd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">回溯机制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">动态计算图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -837,6 +1081,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">深层神经网络</a>
               </li>
              
@@ -862,26 +1110,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">机器学习建模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">最小二乘法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">乱码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -914,6 +1142,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">乱码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -977,31 +1217,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">机器学习建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">最小二乘法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">封装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">继承</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">多态</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">私有</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">类属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">类方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1033,14 +1257,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">thread</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">飞机大战</a>
               </li>
              
@@ -1050,6 +1266,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">项目源码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">封装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">继承</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">多态</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">私有</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">类属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">类方法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">thread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1073,10 +1321,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sklearn</a>
               </li>
              
@@ -1090,6 +1334,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回归树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1177,19 +1425,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">西瓜书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">第一章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">批判性思维</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1205,7 +1449,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">批判性思维</a>
+                <a href="javascript:void(0)" class="js-tag color4">西瓜书</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1217,19 +1461,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">第一章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">第三章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">K-means</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DBSCAN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1238,6 +1474,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">神经网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">概率图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">隐马尔可夫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">马尔可夫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1257,19 +1505,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">概率图</a>
+                <a href="javascript:void(0)" class="js-tag color3">K-means</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">隐马尔可夫</a>
+                <a href="javascript:void(0)" class="js-tag color2">DBSCAN</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">马尔可夫</a>
+                <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">聚类算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1289,14 +1537,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计算机网络概论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
@@ -1310,6 +1550,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">聚类算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">计算机网络概论</a>
               </li>
             
             <div class="clearfix"></div>
