@@ -219,662 +219,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405080426.png" style="zoom:67%;" />
-
-<h1 id="AIGC学习笔记"><a href="#AIGC学习笔记" class="headerlink" title="AIGC学习笔记"></a>AIGC学习笔记</h1><h2 id="一、AIGC——现阶段发展现状"><a href="#一、AIGC——现阶段发展现状" class="headerlink" title="一、AIGC——现阶段发展现状"></a>一、AIGC——现阶段发展现状</h2><blockquote>
-<p>截止2024.03.28</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202403281634397.png" style="zoom:67%;" />
-
-
-
-
-
-<h2 id="二、Suno歌曲方法"><a href="#二、Suno歌曲方法" class="headerlink" title="二、Suno歌曲方法"></a>二、Suno歌曲方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Verse](主歌)、</span><br><span class="line">[Rap](说唱)、</span><br><span class="line">[Chorus](副歌/高潮)、</span><br><span class="line">[Intro](印子)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="三、Stable-Diffusion学习情况"><a href="#三、Stable-Diffusion学习情况" class="headerlink" title="三、Stable Diffusion学习情况"></a>三、Stable Diffusion学习情况</h2><blockquote>
-<p>Stable Diffusion（以下简称SD）分为 web-ui 和 comfy-ui 两种界面形式，管理方式均可以使用 ① github 命令行方式；② 绘世启动器（b站秋叶up主开发），web-ui 和 confy-ui 本质是一样的，不影响出图质量，只是呈现方式和使用方便程度不一样。</p>
-</blockquote>
-<h3 id="3-1-模型"><a href="#3-1-模型" class="headerlink" title="3.1. 模型"></a>3.1. 模型</h3><blockquote>
-<p>安装位置位于 <code>web-ui\models\Stable-diffusion</code> 下，文件名称为<code>model_name.safetensors</code></p>
-<p>模型为大量图片库的基础</p>
-<p><strong>注意：只把<code>model_name.safetensors</code>移入没有预览图，如果需要预览图，把对应 model_name.png 放入同文件夹下即可</strong></p>
-</blockquote>
-<h3 id="3-2-VAE-模型"><a href="#3-2-VAE-模型" class="headerlink" title="3.2. VAE 模型"></a>3.2. VAE 模型</h3><blockquote>
-<p>类似滤镜</p>
-<p>因为文件后缀都一样，区分是VAE还是大模型的网站<a target="_blank" rel="noopener" href="https://spell.novelai.dev/">Stable Diffusion 法术解析 (novelai.dev)</a></p>
-</blockquote>
-<h3 id="3-3-LORA"><a href="#3-3-LORA" class="headerlink" title="3.3. LORA"></a>3.3. LORA</h3><blockquote>
-<p>安装位置位于 <code>web-ui\models\Lora</code> 下，文件名称为<code>Lora_name.safetensors</code></p>
-<p>LORA 为在以模型出图过程中添加的 “佐料”，LORA体积远小于模型体积，注入LORA一定程度上影响出图风格</p>
-<p><strong>注意：只把<code>model_name.safetensors</code>移入没有预览图，如果需要预览图，把对应 model_name.png 放入同文件夹下即可</strong></p>
-</blockquote>
-<h3 id="3-4-文生图-x2F-图生图-共同参数"><a href="#3-4-文生图-x2F-图生图-共同参数" class="headerlink" title="3.4. 文生图 &#x2F; 图生图 共同参数"></a>3.4. 文生图 &#x2F; 图生图 共同参数</h3><p>① 同样提示词、不同排列顺序结果不同，并且“blue hair” 可能会给衣服“染色”，所以调整提示词顺序也是调整图片的方法之一。</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405080145.png" style="zoom:67%;" />
-
-<p>② 有没有逗号也不一样</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405080305.png" style="zoom:67%;" />
-
-<p>③ 手动赋权</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># (关键词:权重)</span></span><br><span class="line">(blue hair:0.6)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<h1 id="快捷键：选中-ctrl-↑-x2F-↓"><a href="#快捷键：选中-ctrl-↑-x2F-↓" class="headerlink" title="快捷键：选中 ctrl+↑ &#x2F; ↓"></a>快捷键：选中 ctrl+↑ &#x2F; ↓</h1></blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405080426.png" style="zoom:67%;" />
-
-<p>④ 参与绘图步数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># [提示词::参与程度]</span></span><br><span class="line">[blue hair::0.5] 	<span class="comment"># 参与作图的 50% 步</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># [提示词::参与程度]</span></span><br><span class="line">[blue hair::10]		<span class="comment"># 参与 20 步</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405080743.png" style="zoom:67%;" />
-
-<p>拓展：分段提示词</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># [提示词1:提示词2:切换百分比]</span></span><br><span class="line">[1man:Joker:0.2]	<span class="comment"># 前20%画1man，后80%画Joker</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405082619.png" style="zoom: 15%;" />
-
-<blockquote>
-<p>特殊情况：</p>
-<p>① 中括号<code>[::x]</code> 变成小括号 <code>(::x)</code> ：如果<code>0≤x≤1</code>在也可以出图并控制权重，如果<code>x＞1</code> 无法出图；</p>
-<p>② [::x] <code>x</code> 值超过上限就取step上限值；</p>
-<p>③ [::x]<code>x</code> 值超是负数会起反作用，是负数就行，具体负数的大小与最终出图无关，会排除类似元素（甚至可能比反向提示词都好用）</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405081202.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405081227.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405081212.png" style="zoom:67%;" />
-
-<p>⑤ 提示词矩阵</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">默认词1|可选词1|可选词2|可选词3|……|可选词N</span><br></pre></td></tr></table></figure>
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405082927.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405083120.png" style="zoom:67%;" />
-
-
-
-<h4 id="3-4-1-提示词"><a href="#3-4-1-提示词" class="headerlink" title="3.4.1 提示词"></a>3.4.1 提示词</h4><h5 id="3-4-1-1-正向提示词"><a href="#3-4-1-1-正向提示词" class="headerlink" title="3.4.1.1 正向提示词"></a>3.4.1.1 正向提示词</h5><blockquote>
-<p>Best quality,Photorealistic,Raw Photo</p>
-</blockquote>
-<blockquote>
-<p>最佳品质，真实感，原始照片</p>
-</blockquote>
-<h5 id="3-4-1-2-反向提示词"><a href="#3-4-1-2-反向提示词" class="headerlink" title="3.4.1.2 反向提示词"></a>3.4.1.2 反向提示词</h5><p>示例1：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(worst quality:2), (low quality:2), (normal quality:2),skin spots, acnes, age spot, Dim color,Missing limbs,Extra limbs,Loss of limbs,Redundant limbs,Limb dislocation,Loss of key human body parts,Wrong limb position,Abnormal human structure,Bad body details,Limb fusion,Limb Overlay，sketchillustrious,logo,text </span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>(最差质量:2), (低质量:2), (正常质量:2), 皮肤斑, 痤疮, 老年斑, 肤色暗淡, 肢体缺失, 肢体多余, 肢体缺失, 肢体多余, 肢体脱位, 丧失 人体关键部位，肢体位置错误，人体结构异常，身体细节不良，肢体融合，肢体叠加，素描，标志，文字</p>
-</blockquote>
-<h4 id="3-4-2-CFG"><a href="#3-4-2-CFG" class="headerlink" title="3.4.2 CFG"></a>3.4.2 CFG</h4><p>在Stable Diffusion模型中，CFG（Classifier Free Guidance）用来控制生成图像与文本提示（prompt）之间的匹配程度。</p>
-<ul>
-<li><p>CFG值越高，生成的图像就会更严格地遵循文本提示的内容。</p>
-</li>
-<li><p>理论上，当CFG值增加时，图像的颜色饱和度和对比度也会增加</p>
-</li>
-<li><p>但是如果CFG值过高，可能会导致图像细节的丢失</p>
-</li>
-<li><p><strong>CFG值设置在4到15之间可以得到较好的效果</strong>。如果CFG值设置得太低，可能会导致图像看起来模糊不清，颜色对比弱，构图质量差<strong>（我发现CFG过低面部也会崩掉）</strong>。而CFG值过高，则可能会使图像过于饱和，颜色和结构失调。</p>
-</li>
-</ul>
-<p><em>CFG&#x3D;30(MAX)</em></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404021534217.png" style="zoom:67%;" />
-
-<p><em>CFG&#x3D;1(MIN)</em></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404021535526.png" style="zoom:67%;" />
-
-
-
-<h4 id="3-4-3-局部重绘"><a href="#3-4-3-局部重绘" class="headerlink" title="3.4.3 局部重绘"></a>3.4.3 局部重绘<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401200414.png" style="zoom:67%;" /></h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401200421.png" style="zoom: 33%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401201516.png" style="zoom: 50%;" />
-
-<p>参数解释</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401201547.png" style="zoom: 50%;" />
-
-<p><strong>蒙版边缘模糊度</strong></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401204047.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401204118.png" style="zoom:67%;" />
-
-
-
-<p><strong>蒙版区域内容处理</strong></p>
-<ul>
-<li><p><code>填充</code>参考周围的像素生成相关的东西</p>
-</li>
-<li><p><code>原图</code>是在原图基础上做一些微调，（会参考原图的风格色调）</p>
-</li>
-<li><p>&#96;&#96;潜在噪声&#96; 适合凭空出现某个东西的情况，可能会有些割裂</p>
-</li>
-<li><p><code>无潜在空间</code>相对独立的出现某个东西，可能会有些割裂</p>
-</li>
-</ul>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401201307.png" style="zoom:67%;" />
-
-<p><em>手指纯绘</em></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404021552698.png" style="zoom:67%;" />
-
-<p><strong>重绘区域</strong></p>
-<ul>
-<li><p><code>全图模式</code>充分参考了原图，重绘出的汽车与原图融合的更好【从整张图片出发，参考全局描述词来补充蒙版部分】</p>
-</li>
-<li><p><code>仅蒙版区域</code> 只绘制蒙版的部分【描述词部分应该仅描述遮罩部分】</p>
-</li>
-<li><p><code>仅蒙版区域下边缘预留像素</code> 该参数越小，绘制细节越丰富，推荐：<strong>如果蒙版区域较小，需要局部修改，就可以适当调大参考半径，如果蒙版区域足够大，需要重绘足够的细节，则需要适当调小参考半径。</strong></p>
-</li>
-</ul>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401202317.png" style="zoom:67%;" />
-
-
-
-
-
-<h4 id="3-4-4-涂鸦重绘"><a href="#3-4-4-涂鸦重绘" class="headerlink" title="3.4.4 涂鸦重绘"></a>3.4.4 涂鸦重绘</h4><blockquote>
-<p>就是在局部重绘的基础上，考虑颜色的问题</p>
-<p>注意：我操作下来，感觉只有在<code>蒙版区域内容处理</code>选择<code>原版</code>才会按照颜色进行参考</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/q版头像.png" style="zoom: 33%;" />
-
-
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401210228.png" style="zoom: 50%;" />
-
-<blockquote>
-<p>描述词：a sweater（一件毛衣）</p>
-</blockquote>
-<h3 id="3-5-ControlNet"><a href="#3-5-ControlNet" class="headerlink" title="3.5. ControlNet"></a>3.5. ControlNet</h3><blockquote>
-<p>为控制图片而生，图片控制体系，提供多种方式有目标性的控制图片</p>
-<p><a href="%5Braw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui-extensions/master/index.json%5D(https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui-extensions/master/index.json)">扩展列表网址</a> 使用方式：web-ui——扩展插件——可用——加载自：</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401185101.png" style="zoom: 50%;" />
-
-<h4 id="Canny（硬边缘）"><a href="#Canny（硬边缘）" class="headerlink" title="Canny（硬边缘）"></a>Canny（硬边缘）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401185206.png" style="zoom:67%;" />
-
-
-
-<h4 id="Depth（深度）"><a href="#Depth（深度）" class="headerlink" title="Depth（深度）"></a>Depth（深度）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191024.png" style="zoom:67%;" />
-
-
-
-<h4 id="NormalMap（法线贴图）"><a href="#NormalMap（法线贴图）" class="headerlink" title="NormalMap（法线贴图）"></a>NormalMap（法线贴图）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401190915.png" style="zoom:67%;" />
-
-
-
-<h4 id="OpenPose（姿态）"><a href="#OpenPose（姿态）" class="headerlink" title="OpenPose（姿态）"></a>OpenPose（姿态）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401190534.png" style="zoom:67%;" />
-
-<h4 id="3D-Openpose插件"><a href="#3D-Openpose插件" class="headerlink" title="3D Openpose插件"></a>3D Openpose插件</h4><p><img src="C:\Users\gavin\AppData\Roaming\Typora\typora-user-images\image-20240401195409287.png" alt="image-20240401195409287"></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401195358.png" style="zoom:67%;" />
-
-<h4 id="MLSD（直线）"><a href="#MLSD（直线）" class="headerlink" title="MLSD（直线）"></a>MLSD（直线）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401190802.png" style="zoom:67%;" />
-
-
-
-<h4 id="Lineart-（线稿）"><a href="#Lineart-（线稿）" class="headerlink" title="Lineart （线稿）"></a>Lineart （线稿）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191059.png" style="zoom:67%;" />
-
-
-
-<h4 id="SoftEdge-（软边缘）"><a href="#SoftEdge-（软边缘）" class="headerlink" title="SoftEdge （软边缘）"></a>SoftEdge （软边缘）</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191131.png" style="zoom:67%;" />
-
-
-
-<h4 id="Scribble-x2F-Sketch-涂鸦-x2F-草图"><a href="#Scribble-x2F-Sketch-涂鸦-x2F-草图" class="headerlink" title="Scribble&#x2F;Sketch (涂鸦&#x2F;草图)"></a>Scribble&#x2F;Sketch (涂鸦&#x2F;草图)</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191158.png" style="zoom:67%;" />
-
-
-
-<h4 id="Segmentation-语义分割"><a href="#Segmentation-语义分割" class="headerlink" title="Segmentation (语义分割)"></a>Segmentation (语义分割)</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191505.png" style="zoom:67%;" />
-
-
-
-<h4 id="Shuffle-随机洗牌"><a href="#Shuffle-随机洗牌" class="headerlink" title="Shuffle (随机洗牌)"></a>Shuffle (随机洗牌)</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191454.png" style="zoom:67%;" />
-
-
-
-<h4 id="Tile-x2F-Blur-分块-x2F-模糊"><a href="#Tile-x2F-Blur-分块-x2F-模糊" class="headerlink" title="Tile&#x2F;Blur (分块&#x2F;模糊)"></a>Tile&#x2F;Blur (分块&#x2F;模糊)</h4><blockquote>
-<p>增加细节、减少细节</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191541.png" style="zoom:67%;" />
-
-
-
-<h4 id="局部重绘"><a href="#局部重绘" class="headerlink" title="局部重绘"></a>局部重绘</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401200414.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401200421.png" style="zoom: 33%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401201516.png" style="zoom: 50%;" />
-
-<p>参数解释</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401201547.png" style="zoom: 50%;" />
-
-<p><strong>蒙版边缘模糊度</strong></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401204047.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401204118.png" style="zoom:67%;" />
-
-
-
-<p><strong>蒙版区域内容处理</strong></p>
-<ul>
-<li><p><code>原图</code>适用于大部分情况，（会参考原图的风格色调）</p>
-</li>
-<li><p><code>潜在噪声</code> 适合凭空出现某个东西的情况<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401201307.png" style="zoom:67%;" /></p>
-</li>
-</ul>
-<p><strong>重绘区域</strong></p>
-<ul>
-<li><p><code>全图模式</code>充分参考了原图，重绘出的汽车与原图融合的更好</p>
-</li>
-<li><p><code>仅蒙版区域下边缘预留像素</code> 该参数越小，绘制细节越丰富，推荐：<strong>如果蒙版区域较小，需要局部修改，就可以适当调大参考半径，如果蒙版区域足够大，需要重绘足够的细节，则需要适当调小参考半径。</strong></p>
-</li>
-</ul>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401202317.png" style="zoom:67%;" />
-
-
-
-
-
-<h4 id="InstructP2P"><a href="#InstructP2P" class="headerlink" title="InstructP2P"></a>InstructP2P</h4><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191722.png" style="zoom:67%;" />
-
-
-
-<h4 id="Reference-参考"><a href="#Reference-参考" class="headerlink" title="Reference (参考)"></a>Reference (参考)</h4><h4 id="Recolor-重上色"><a href="#Recolor-重上色" class="headerlink" title="Recolor (重上色)"></a>Recolor (重上色)</h4><blockquote>
-<p>重新给图片上色</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240401191759.png" style="zoom:67%;" />
-
-<ul>
-<li><strong>Revision</strong></li>
-</ul>
-<blockquote>
-<p><strong>只支持SDXL模型</strong>，功能解释：把图片当做提示词</p>
-</blockquote>
-<p>共两种模式</p>
-<ul>
-<li>把图片当做提示词作为文字提示词的<strong>补充</strong></li>
-<li><strong>忽略</strong>文字提示词，完全把图片提示词当做提示词，</li>
-</ul>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240402190655.png" style="zoom:67%;" />
-
-<h4 id="T2I-Adapter"><a href="#T2I-Adapter" class="headerlink" title="T2I-Adapter"></a>T2I-Adapter</h4><h4 id="IP-Adapter"><a href="#IP-Adapter" class="headerlink" title="IP-Adapter"></a>IP-Adapter</h4><h4 id="Instant-ID"><a href="#Instant-ID" class="headerlink" title="Instant_ID"></a>Instant_ID</h4><h4 id="SparseCtrl-稀疏控制"><a href="#SparseCtrl-稀疏控制" class="headerlink" title="SparseCtrl (稀疏控制)"></a>SparseCtrl (稀疏控制)</h4><blockquote>
-<p><strong>实操：给模特换腿换头</strong></p>
-<p>换腿：</p>
-<p>局部重绘 + canny</p>
-<p>换头：</p>
-<p>局部重绘 + openopse + canny（权重可以适当降低）+ 提示词</p>
-<p>衣服模型canny + 真人面部canny 在PS 中融合成新的 canny</p>
-</blockquote>
-<h4 id="illumination（引导光影）"><a href="#illumination（引导光影）" class="headerlink" title="illumination（引导光影）"></a>illumination（引导光影）</h4><blockquote>
-<p>(<a target="_blank" rel="noopener" href="https://civitai.com/models/80536/lighting-based-picture-control-controlnet">Lighting based picture control controlnet - v1.0 | Stable Diffusion Controlnet | Civitai</a>)</p>
-<p>通过<strong>灰度图模板</strong>引导成图光影（灰度图模板需要自己制作）</p>
-</blockquote>
-<p>生成图片</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(ultra realistic, best quality) ,perfect face, <span class="keyword">in</span> japanese Yukata, night,sky,1 girl solo,</span><br><span class="line">Steps: 20, Sampler: DPM++ SDE Karras, CFG scale: 7, Seed: 1150592345, Size: 768x512, Model <span class="built_in">hash</span>: 8a952cafe9, Model: anyloraCheckpoint_bakedvaeFtmseFp16NOT, Version: v1.2.1</span><br></pre></td></tr></table></figure>
-
-
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/00008-1150592345.png" style="zoom: 50%;" />
-
-<p>制作蒙版（想加一个月亮）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">增加提示词</span><br><span class="line">big yellow moon,shiny,</span><br></pre></td></tr></table></figure>
-
-
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/下载2.png" style="zoom: 50%;" />
-
-
-
-<p>选择CN</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404201808.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404201818.png" style="zoom:67%;" />
-
-<p>结果：</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/00031-1150592345.png" style="zoom: 50%;" />
-
-<p>对比不同CN 权重 和 引导终止时机</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/xyz_grid-0001-1150592345.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404200913.png" style="zoom:67%;" />
-
-<blockquote>
-<p><strong>结论：</strong></p>
-<p>① 由于上传的灰度图完全是黑白，因此如果<code>权重</code>1，<code>结束时机</code>1，会出现过拟合现象；</p>
-<p>② 调整<code>权重</code> 和 <code>结束时机</code> 能够有效解决过拟合现象；</p>
-<p>③ 权重 和 <code>结束时机</code> 的<code>权重</code>之和相同时，画面明暗相同；</p>
-<p>④ <code>权重</code>的大小会影响构图；但是<code>结束时机</code>不会</p>
-</blockquote>
-<h4 id="FaceSwapLab（换脸）"><a href="#FaceSwapLab（换脸）" class="headerlink" title="FaceSwapLab（换脸）"></a>FaceSwapLab（换脸）</h4><blockquote>
-<p><a target="_blank" rel="noopener" href="https://glucauze.github.io/sd-webui-faceswaplab/doc/">GitHub项目地址</a></p>
-<p><a target="_blank" rel="noopener" href="https://glucauze.github.io/sd-webui-faceswaplab/doc/">官方文档</a></p>
-<p>安装好后再 文生图、图生图、扩展栏、均有FaceSwapLab</p>
-</blockquote>
-<p><strong>案例：</strong></p>
-<blockquote>
-<p>把图1人脸换到图2</p>
-</blockquote>
-<p>图1：</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/00011-1711414101.png" style="zoom:67%;" />
-
-<p>图2：</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/00010-2521349405.png" style="zoom:67%;" />
-
-<p>选择图生图：</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240406235529.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240406235733.png" style="zoom:67%;" />
-
-<p>结果</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407000225.png" style="zoom:67%;" />
-
-<p><strong>高级功能：</strong></p>
-<p>这里可以设置训练的面部（可以自己训练，在插件页的FaceSwapLab中训练或上传到指定文件夹即可）</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407000653.png" style="zoom:67%;" />
-
-<p>实验结果表示 <code>模型换脸</code> 和 直接<code>reference换脸</code> 没啥区别</p>
-<p><img src="C:\Users\gavin\AppData\Roaming\Typora\typora-user-images\image-20240407000956040.png" alt="image-20240407000956040"></p>
-<p>如果遇到一张图片多张脸，可以在这里选择人脸序号</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407000402.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407000410.png" style="zoom:67%;" />
-
-<p>高级选项里的</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407001757.png" style="zoom:67%;" />
-
-<blockquote>
-<p>相似度：根据参数，选择是否丢弃换脸结果</p>
-<p>预重绘（变换前）：调整两张脸融合效果（具体对比见下图，推荐重绘幅度参数<code>0.3</code>左右）</p>
-<p>后期处理： 增加细节、提高分辨率，修正肤色等</p>
-<p>预重绘（变换后）：调整两张脸融合效果（具体对比见下图，推荐重绘幅度参数<code>0.3</code>左右）</p>
-</blockquote>
-<p><img src="https://pbs.twimg.com/media/F6X4csDaoAAqogy?format=jpg&name=4096x4096" alt="图像"></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407001727.png" style="zoom:67%;" />
-
-<p><strong>插件其他功能</strong></p>
-<p>构建：提供多张照片以构建一个人脸保存成特定文件供更频繁方便的使用</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407002046.png" style="zoom:67%;" />
-
-<p>比较人脸，给出结果百分比：</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407000841.png" style="zoom:67%;" />
-
-<p>提取：把一张照片里的所有人脸提取出来</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407002219.png" style="zoom:67%;" />
-
-<p>分析面部：</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407002307.png" style="zoom:67%;" />
-
-<h3 id="6-X-x2F-Y-x2F-Z-图表"><a href="#6-X-x2F-Y-x2F-Z-图表" class="headerlink" title="6 X&#x2F;Y&#x2F;Z 图表"></a>6 X&#x2F;Y&#x2F;Z 图表</h3><blockquote>
-<p>XYZ图表是以三个轴来对比不同设置【参数、模型等】</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404031509901.png" style="zoom:67%;" />
-
-
-
-<h3 id="7-高清化放大"><a href="#7-高清化放大" class="headerlink" title="7. 高清化放大"></a>7. 高清化放大</h3><blockquote>
-<p>共有三个地方有高清化，分别在 文生图、图生图、单独的高清化</p>
-<p>结论：</p>
-<ul>
-<li><p>R-ESRGAN 4x+ 和 R-ESRGAN 4x+ Anime6B 适合动漫风</p>
-</li>
-<li><p><strong>ESRGAN_4x 适合真人</strong></p>
-</li>
-<li><p>LDSR算法耗时长，细节效果好，但是人面部会有”假滤镜“，整体会略微偏黄（可PS白平衡拉回）</p>
-</li>
-<li><p>ScuNET、ScuNET PSNR、SwinIR_4x 适合降噪处理</p>
-</li>
-</ul>
-</blockquote>
-<p>放大方式：</p>
-<p><strong>方案一：</strong></p>
-<p>直接用“后期处理”里的工具完成。</p>
-<p><strong>方案二：</strong></p>
-<blockquote>
-<p>提示词：原提示词反推+增加提示词<code>Best quality,Photorealistic,Raw Photo</code> </p>
-<p>模型选择：Realistic Vision V5.1</p>
-<p>重绘幅度：0.4</p>
-<p>Tiled Diffusion：① 启用+MultiDiffusion+R-ESRGAN 4x+  ②  取消勾选输“保持输入图像大小”③放大倍率</p>
-<p>ControlNet：启用+ Tile+完美像素</p>
-</blockquote>
-<h3 id="8-Inpaint-Anything"><a href="#8-Inpaint-Anything" class="headerlink" title="8. Inpaint Anything"></a>8. Inpaint Anything</h3><blockquote>
-<p>狭义上讲，是个快速抠图工具</p>
-<p>应用： 保留衣服，控制</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404174917.png" style="zoom:67%;" />
-
-<ul>
-<li><code>sam_vit_h_xxx.pth</code>  Huge 体积最大</li>
-<li><code>sam_vit_l_xxx.pth</code>  Large 较大</li>
-<li><code>sam_vit_b_xxx.pth</code>  Base 体积最小</li>
-</ul>
-<p>体积越大理论效果越好，但越吃资源</p>
-<p><strong>使用方法</strong></p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404190620.png" style="zoom:67%;" />
-
-<blockquote>
-<p>选择区域：【灰色是保留部分】选择的是不想保留的区域，如果需要，可以反转蒙版</p>
-</blockquote>
-<p>功能1：重绘</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404190901.png" style="zoom:67%;" />
-
-<p>功能2：清理器</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404191320.png" style="zoom:67%;" />
-
-<p>功能3：</p>
-<p>ControlNet重绘</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404191505.png" style="zoom:67%;" />
-
-<p>功能4：仅蒙版</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404191700.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404191734.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240404191945.png" style="zoom:67%;" />
-
-
-
-<h3 id="9-AnimateDiff-GIF插件"><a href="#9-AnimateDiff-GIF插件" class="headerlink" title="9. AnimateDiff GIF插件"></a>9. AnimateDiff GIF插件</h3><blockquote>
-<p>[animatediff 插件地址](<a target="_blank" rel="noopener" href="https://github.com/guoyww/animatediff/">GitHub - guoyww&#x2F;AnimateDiff: Official implementation of AnimateDiff.</a>)</p>
-<p><a target="_blank" rel="noopener" href="https://huggingface.co/guoyww/animatediff/tree/main">模型地址</a></p>
-<p>生成动画</p>
-<p>推荐模型：toonyou</p>
-<p>生成文件地址：<code>outputs/txt2img-images/AnimateDiff</code> 下</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405074043.png" style="zoom:67%;" />
-
-
-
-
-
-<h3 id="6-应用"><a href="#6-应用" class="headerlink" title="6. 应用"></a>6. 应用</h3><h4 id="6-1-海报制作"><a href="#6-1-海报制作" class="headerlink" title="6.1 海报制作"></a>6.1 海报制作</h4><blockquote>
-<p>先制作好文字底 ，黑白，然后使用 canny + depth 和适合风格的模型 + LORA ，刷图即可</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240403001410.png" style="zoom:67%;" />
-
-<h4 id="6-2-二维码美化"><a href="#6-2-二维码美化" class="headerlink" title="6.2 二维码美化"></a>6.2 二维码美化</h4><blockquote>
-<p>本质上</p>
-<p> 二维码制作工具：<a target="_blank" rel="noopener" href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbExHY2ZJZi1MNUFsa1RBTUdGTW9RTEdMelRqUXxBQ3Jtc0ttaGZEWWRoT2l4QUIyTFc2ZWk3aGRkN0ZYeTgwOWNidTBzZXNOZDlHUmFKRk9rV0VlSnlzM1Ezck5CMWxKOURMY3pManJlWEpQdXl0d2Qyalo2VTZCNElMQkpUQ1dOZzFmVkE1SU1KNUstS0UtRmx0NA&q=https://qrcode.antfu.me/&v=W6G3g_C3zZ4">https://qrcode.antfu.me/</a> </p>
-<p>二维码解码：<a target="_blank" rel="noopener" href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazlpVnNpVW9XY2JlVWE1bTc5TEJQQzVraGFyZ3xBQ3Jtc0ttOC1mQzFiVzVaRlBMMVgtVmFCVVNZSDgySDQwcEU4UmlQX0FrSW9nRnlRZ3Jod0RZVkJXckFDSkR0QUFlaFRUdFczNjlMZWxOcEFNXzFSUGpMeEFFUkI1TUFMVlhKcXFMczljU1d5WlBxcEVmVUg5SQ&q=https://jiema.wwei.cn/&v=W6G3g_C3zZ4">https://jiema.wwei.cn/</a> </p>
-<p>所用到的模型：</p>
-<p> tile：<a target="_blank" rel="noopener" href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVNmU0pwbzRwdHpLSFd3MHZBV2o0UEhsTkFzZ3xBQ3Jtc0tuV0ZFMnMzM2Q5SXBDTE1KTlN0d25meXN1aWNVbDBvdkhHZ1c4R0JWRllCZWxzS1E0dkM2ZXkzcWVNb1VSNVA4eXc1NjFsOEJwTVEtU0FxNVE3TGxkSHlhQXBnRl9vSWUwTzRUNjB3ZkZaUDZYd0o4MA&q=https://huggingface.co/lllyasviel/control_v11f1e_sd15_tile&v=W6G3g_C3zZ4">https://huggingface.co/lllyasviel/con...</a> </p>
-<p>qrcord-monster：<a target="_blank" rel="noopener" href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbE1rbjhjRmZtMndrcEx4WHZKZHZ1c1prUjQzZ3xBQ3Jtc0tucVpGU0FZOHFuMXJGSUlYa25zM1BkY3VHOW9SU1Zycng3MjRoZDUyN0xMOGEyNGxLZVpJYjJ6S2FGUndQVDBNQkx2clpwUjkzZlRyUE5vM0x4VTA2amQ5RGlrUHJhMURFSkxJRmRyUVZEaVNJRHpwWQ&q=https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster&v=W6G3g_C3zZ4">https://huggingface.co/monster-labs/c...</a> </p>
-<p>Brightness Control：<a target="_blank" rel="noopener" href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazB5cko4Q1h4ZVlFaHZwZU81ZTZ1andQZk4zUXxBQ3Jtc0ttTHIxRzJTSk5WcmZwcFBmYzlyZVllRzZhNTRWV3dDQ2lNb191MThoNXlZeVdGUjUzUllpZ3g3NDAyV2J4dHFKdTdNUGtMMXB2SVRad3BDXzUzUzhaUXFTZWhsMWdBVUJMMndyUWRMc2JvQUFOVmc0Zw&q=https://huggingface.co/ioclab/ioc-controlnet&v=W6G3g_C3zZ4">https://huggingface.co/ioclab/ioc-con...</a></p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240403003137.png" style="zoom:67%;" />
-
-<h4 id="6-3-电商换装"><a href="#6-3-电商换装" class="headerlink" title="6.3 电商换装"></a>6.3 电商换装</h4><blockquote>
-<p>① 换腿：不需要描述词，局部重绘即可</p>
-<p>② 换脸：局部重绘，canny，openpose，（看情况加Prompt）</p>
-<p>③ 完美颜值：理想人脸图 canny 处理 + 叠加覆盖到原canny图脸上，脸上局部重绘，（看情况加Prompt）</p>
-</blockquote>
-<p>① 换腿：不需要任何提示词</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407005953.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010006.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010027.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010058.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010129.png" style="zoom: 50%;" />
-
-<p>② 上一步基础上换头</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010310.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010336.png" style="zoom: 50%;" />
-
-
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010248.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010359.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010418.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010500.png" style="zoom: 50%;" />
-
-<p>③ 调整人脸朝向</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010536.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407010627.png" style="zoom: 50%;" />
-
-<p>④ 完美颜值</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011355.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011423.png" style="zoom: 50%;" />
-
-
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011336.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011437.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011619.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011538.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011708.png" style="zoom: 50%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407011733.png" style="zoom: 50%;" />
-
-<h4 id="6-4-老照片上色"><a href="#6-4-老照片上色" class="headerlink" title="6.4 老照片上色"></a>6.4 老照片上色</h4><blockquote>
-<p>黑白照片——&gt;（图生图）Lineart 做底 + 局部颜色描述词 ——&gt; 新照片</p>
-<p>局部变色——&gt; （图生图）局部重绘+Lineart 做底 + 局部颜色描述词  ——&gt; 新照片</p>
-<p>实验发现：Lineart 比 canny 模型效果要好一点</p>
-<p><strong>CN里的Recolor也是很好的一个上色方式</strong></p>
-</blockquote>
-<h4 id="6-5-拓图"><a href="#6-5-拓图" class="headerlink" title="6.5 拓图"></a>6.5 拓图</h4><blockquote>
-<p>（图生图） ① CN局部重绘 ，缩放模式选择：填充；② 图片尺寸：大一些，然后缩放模式选择：填充</p>
-<p>（不想写提示词：控制模式选择：以CN为主）</p>
-</blockquote>
-<p>局部重绘 inpaint 模式对比：</p>
-<blockquote>
-<p>inpaint_only_LAMA细节更好一点；</p>
-<p>Inpaint global harmonious 除了会修改模板部分，还会修改给其他地方细节做一些修改</p>
-</blockquote>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404031539949.png" style="zoom:67%;" />
-
-<h4 id="6-6-动图制作"><a href="#6-6-动图制作" class="headerlink" title="6.6 动图制作"></a>6.6 动图制作</h4><p>方法1：AnimateeDiff插件</p>
-<p>方法2：提示词权重控制 <code>[1man:Joker:0.2]</code> + x&#x2F;y&#x2F;z 图表 + 剪辑软件变成GIF</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405132944.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405133001.png" style="zoom:67%;" />
-
-<blockquote>
-<p>测试边界：0.02</p>
-<p>0.46和0.47结果是一样的，也就是等差数列公差至少0.02</p>
-</blockquote>
-<h4 id="6-7-IP-制作"><a href="#6-7-IP-制作" class="headerlink" title="6.7 IP 制作"></a>6.7 IP 制作</h4><blockquote>
-<p>多角度人像 用来训练 LORA ——&gt; 达到角色统一的目的</p>
-<p><a target="_blank" rel="noopener" href="https://cobaltexplorer.com/2023/06/character-sheets-for-stable-diffusion/">多角度人像研究文章</a></p>
-</blockquote>
-<p>使用这两个图片作为CN模板</p>
-<p>① 用来 Openpose 控制面部朝向</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/多角度人像模板.webp" style="zoom:67%;" />
-
-<p>② 用 Lineart 区分分区</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/分割模板.webp" style="zoom:67%;" />
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提示词参考</span></span><br><span class="line">(a character sheet of a woman from different angles with a grey background:1.4)  , photorealistic, 8k, hyperrealism, studio lighting, photography</span><br><span class="line"></span><br><span class="line"><span class="comment"># （灰色背景下不同角度的女性角色表：1.4），逼真，8k，超现实主义，工作室照明，摄影</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405224725.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405223444.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405223623.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405223704.png" style="zoom:67%;" />
-
-<blockquote>
-<p>原理解释：</p>
-<p>用 Openpose 控制出图姿势，来获取到360度角色样貌</p>
-<p>用 Lineart 和 Prompt 告诉SD 需要的图片</p>
-<p>使用同款模板，推荐图片的比例为 <code>1328*800</code> （和黑色方框分割图大小一致），这样生成后的图片为矩阵中每个图片  <code>256*256</code>，需要放大到  <code>512*512 </code> 会比较适合训练 LORA；</p>
-</blockquote>
-<p>点击生成</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/00546-765588845.png" style="zoom:67%;" />
-
-<p>通过 <code>图生图</code> 中的 <code>图片放大</code> +<code>CN的Tile模型</code> 放大和补充细节即可， 推荐放大模型 E-XXX 4x+</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405225557.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405225629.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240405225750.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/00546-765588845.png" style="zoom:67%;" />
-
-
-
-
-
-
-
-
-
-
-
-<h4 id="6-8-换脸"><a href="#6-8-换脸" class="headerlink" title="6.8 换脸"></a>6.8 换脸</h4><blockquote>
-<p>方案一： IP-Adapter（效果一般）</p>
-<p>方案二：Openpose 【上面 3.5 有介绍】</p>
-<p>方案三：FaceSwapLab 插件 【上面 3.5 有介绍】</p>
-</blockquote>
-<h4 id="6-9-同人同景、不同角度"><a href="#6-9-同人同景、不同角度" class="headerlink" title="6.9  同人同景、不同角度"></a>6.9  同人同景、不同角度</h4><p>步骤：</p>
-<p>① 前期图片素材准备：获取同一场景不同角度图片（拍摄、谷歌地图等）；分割模板；骨骼图</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407002931.png" style="zoom:67%;" />
-
-<p>② 图片处理：两张街景放到分割板子上</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003653.png" style="zoom:67%;" />
-
-<p>这步注意 CN 分辨率</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003728.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003740.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003800.png" style="zoom:67%;" />
-
-<p>③ 出图</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003826.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003837.png" style="zoom:67%;" />
-
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407003915.png" style="zoom:67%;" />
-
-<p>④ 得到初步图片</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407004004.png" style="zoom:67%;" />
-
-<p>⑤ 图片</p>
-<blockquote>
-<p>图生图，Prompt 增加景深描述，重绘幅度0.6，CN-Canny + CN-Tile 0.3</p>
-</blockquote>
-<p>得到结果</p>
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240407004200.png" style="zoom:67%;" />
-
-
-
-<h4 id="6-10-人脸修复的三种方式"><a href="#6-10-人脸修复的三种方式" class="headerlink" title="6.10 人脸修复的三种方式"></a>6.10 人脸修复的三种方式</h4><blockquote>
-<p>① 后期修改 - 分辨率提高 - 面部修复<code>CodeFormer</code></p>
-<p>② 图生图，局部重绘，CN-Canny + CN-Openpose + CN-Tile</p>
-<p>③ FaceSwapLab 换脸</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2024/04/07/2024.03.28_AI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more">more >></a>
+        
       
 
       
@@ -1159,11 +506,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">理论学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">兴趣爱好</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">兴趣爱好</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">理论学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -1957,18 +1304,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MAC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">zsh</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
               </li>
              
@@ -1978,22 +1313,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">PyQt5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Axes</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2017,6 +1336,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MAC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">zsh</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">PyQt5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Axes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">正向传播</a>
               </li>
              
@@ -2030,10 +1381,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">torch.optim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2058,6 +1405,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">pyplot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">autograd</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">回溯机制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">动态计算图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TensorBoard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">深层神经网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">异或门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">深度神经网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">super</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2089,83 +1468,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">深层神经网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">异或门</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">深度神经网络</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">super</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">张量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">广播</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">运算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">机器学习建模</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">最小二乘法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">乱码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">阿里云</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">autograd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">回溯机制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">动态计算图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2181,31 +1488,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">张量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">广播</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">运算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">分支</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">循环</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">while</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">if</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">嵌套循环</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TensorBoard</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2245,6 +1540,42 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BUG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">乱码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">阿里云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">单例</a>
               </li>
              
@@ -2253,27 +1584,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模块</a>
+                <a href="javascript:void(0)" class="js-tag color3">分支</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">包</a>
+                <a href="javascript:void(0)" class="js-tag color3">循环</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">文件</a>
+                <a href="javascript:void(0)" class="js-tag color1">while</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">eval函数</a>
+                <a href="javascript:void(0)" class="js-tag color3">if</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">固定写法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
+                <a href="javascript:void(0)" class="js-tag color5">嵌套循环</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2301,6 +1628,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模块</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">eval函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">固定写法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">飞机大战</a>
               </li>
              
@@ -2325,6 +1672,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">TIM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">typora</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -2333,11 +1688,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TIM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">typora</a>
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2357,7 +1708,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+                <a href="javascript:void(0)" class="js-tag color1">局域网互联</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">远程访问</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2377,50 +1732,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">理论学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">信息论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">比特</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">信息量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">局域网互联</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">远程访问</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">聚类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">密度峰值</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模糊逻辑</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">粗糙集</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
               </li>
              
@@ -2429,27 +1740,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">思腾合力</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">兴趣爱好</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">批判性思维</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2473,19 +1764,59 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">西瓜书</a>
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">贝叶斯分类器</a>
+                <a href="javascript:void(0)" class="js-tag color5">思腾合力</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">拉格朗日乘子法</a>
+                <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">第三章</a>
+                <a href="javascript:void(0)" class="js-tag color5">理论学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">批判性思维</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模糊逻辑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">粗糙集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">聚类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">密度峰值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">信息论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">比特</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">信息量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2501,23 +1832,47 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">西瓜书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">贝叶斯分类器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">拉格朗日乘子法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">第一章</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">K-means</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DBSCAN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">神经网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">第二章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">第三章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">离散数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">合取∧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">析取∨</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ㄱ</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2533,15 +1888,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">K-means</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DBSCAN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">聚类算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计算机网络概论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2561,23 +1924,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">第二章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">离散数学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">合取∧</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">析取∨</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ㄱ</a>
+                <a href="javascript:void(0)" class="js-tag color3">计算机网络概论</a>
               </li>
              
               <li class="article-tag-list-item">
