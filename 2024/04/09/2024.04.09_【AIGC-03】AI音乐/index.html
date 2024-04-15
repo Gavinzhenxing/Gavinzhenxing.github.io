@@ -14,8 +14,13 @@
 <meta property="og:site_name" content="Gavin的部落阁">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240415073302.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404150957908.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404150959036.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404151029862.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404151030713.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404151037019.png">
 <meta property="article:published_time" content="2024-04-09T04:59:55.000Z">
-<meta property="article:modified_time" content="2024-04-15T00:15:32.743Z">
+<meta property="article:modified_time" content="2024-04-15T02:45:44.966Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="AIGC">
 <meta property="article:tag" content="AI工具">
@@ -228,8 +233,293 @@
 
 <span id="more"></span>
 
-<h2 id="一、Suno"><a href="#一、Suno" class="headerlink" title="一、Suno"></a>一、Suno</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Verse](主歌)、</span><br><span class="line">[Rap](说唱)、</span><br><span class="line">[Chorus](副歌/高潮)、</span><br><span class="line">[Intro](印子)</span><br></pre></td></tr></table></figure>
+<h2 id="一、Suno"><a href="#一、Suno" class="headerlink" title="一、Suno"></a>一、Suno</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://suno.com/">Suno官网</a></p>
+<p>全流程AI歌曲大致流程：</p>
+<p>GPT作词——&gt;Suno抽卡做歌——&gt;延续歌曲——&gt;生成完整歌曲</p>
+</blockquote>
+<h3 id="1-1-歌曲结构"><a href="#1-1-歌曲结构" class="headerlink" title="1.1 歌曲结构"></a>1.1 歌曲结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Intro](前奏)</span><br><span class="line">[Verse](主歌)、</span><br><span class="line">[Chorus](副歌/高潮)、</span><br><span class="line">[end](结尾)</span><br><span class="line"></span><br><span class="line"># 额外的</span><br><span class="line">[Rap](说唱)</span><br><span class="line">[Solo]</span><br><span class="line">[Outro]</span><br><span class="line">[Pre-chours]</span><br><span class="line">[Bridge](主歌和副歌之间)</span><br></pre></td></tr></table></figure>
 
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404150957908.png" style="zoom:67%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404150959036.png" style="zoom:67%;" />
+
+
+
+<h3 id="1-2-GPT-歌词生成"><a href="#1-2-GPT-歌词生成" class="headerlink" title="1.2 GPT-歌词生成"></a>1.2 GPT-歌词生成</h3><p><strong>让<code>GPT</code>生成固定格式的 <code>Prompt</code></strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Character</span><br><span class="line">你是一位天才歌詞創作家，擅長在滿足用戶特定需求的同時，創作出細膩且富有文學瀟灑的歌詞。你的歌詞總能準確表述出用戶想要傳達的情感和故事內容。</span><br><span class="line"><span class="comment">## Skills</span></span><br><span class="line"><span class="comment">### Skill 1: 創作歌詞</span></span><br><span class="line">- 根據使用者提供的故事和主題進行歌詞創作</span><br><span class="line">- 確保歌詞的韻律和節奏符合要求</span><br><span class="line">- 創作出的歌詞要有文學氣質</span><br><span class="line">- 在副歌部分進行跨行重複來強化主題</span><br><span class="line"><span class="comment">### Skill 2: 輸出English prompt</span></span><br><span class="line">- 根據創作的歌詞和故事內容，用英文片語形式輸出歌曲的prompt</span><br><span class="line">- 輸出的prompt需要包含音樂流派、音樂風格、情緒、樂器、主題或場景、人聲描述等資訊</span><br><span class="line"><span class="comment">## Constraints:</span></span><br><span class="line">- 你只允許討論和創作歌詞有關的話題</span><br><span class="line">- 你得出的英文prompt必須與策應用戶要求的歌詞和故事內容相關</span><br><span class="line">- 如果用戶提出的問題不屬於歌詞創作或英文prompt求解，你不能進行回答</span><br><span class="line"><span class="comment">##請按以下結構幫我創作：</span></span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">[instrumental intro]</span></span><br><span class="line"><span class="string">[Verse 1]</span></span><br><span class="line"><span class="string">&lt;歌詞&gt;</span></span><br><span class="line"><span class="string">[Chorus]</span></span><br><span class="line"><span class="string">&lt;歌詞&gt;</span></span><br><span class="line"><span class="string">[Verse 2]</span></span><br><span class="line"><span class="string">&lt;歌詞&gt;</span></span><br><span class="line"><span class="string">[Chorus]</span></span><br><span class="line"><span class="string">&lt;歌詞&gt;</span></span><br><span class="line"><span class="string">[Bridge]</span></span><br><span class="line"><span class="string">&lt;歌詞&gt;</span></span><br><span class="line"><span class="string">[Guitar solo]</span></span><br><span class="line"><span class="string">[Chorus]</span></span><br><span class="line"><span class="string">&lt;歌詞&gt;</span></span><br><span class="line"><span class="string">[Outro]</span></span><br><span class="line"><span class="string">[End]</span></span><br><span class="line"><span class="string">&quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line"><span class="comment">##02 輸出歌詞以後，再根據歌詞和故事內容，以英文片語的形式再給出歌曲的prompt。</span></span><br><span class="line">請按以下格式幫我輸出英文prompt，並且總長度不得超過120個字元</span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;&lt;音樂流派（如Kpop、Heavy Metal）&gt;、&lt;音樂風格（如Slow、Broadway）&gt;、&lt;情緒（如悲傷、憤怒）&gt;、&lt;樂器（如鋼琴、吉他）&gt;、&lt;主題或場景&gt;、&lt;人聲描述（如憤怒的男聲、憂傷的女聲）&gt;&quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line">下方為範本</span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;Pop, Slow, Melancholic, Piano and Guitar, Theme of lost love, Soprano with a touch of sadness&quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">如果你了解了，請等待我輸入 prompt</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-歌曲风格"><a href="#1-3-歌曲风格" class="headerlink" title="1.3 歌曲风格"></a>1.3 歌曲风格</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://suno.wiki/">官方文档</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Style 风格</th>
+<th align="center">Genre 类型</th>
+<th align="center">Types 类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><em><strong>Danceable 可跳舞</strong></em></td>
+<td align="center"><em><strong>Country 国家</strong></em></td>
+<td align="center"><em><strong>Background 背景</strong></em></td>
+</tr>
+<tr>
+<td align="center">Dance 跳舞 <br />Festive 节日 <br />Groovy 槽的 <br />Mid-Tempo 中速 <br />Syncopated 切分音 <br />Tipsy 醉</td>
+<td align="center">Appalachian 阿巴拉契亚<br /> Bluegrass 兰草 <br />Country 国家 <br />Folk 民族 <br />Freak Folk 怪胎民谣 Western 西方</td>
+<td align="center">Elevator 电梯 <br />Jingle 静乐县 <br />Muzak 穆扎克</td>
+</tr>
+<tr>
+<td align="center"><em><strong>Dark 黑暗</strong></em></td>
+<td align="center"><em><strong>Dance 跳舞</strong></em></td>
+<td align="center"><em><strong>Call to Prayer 祷告的呼召</strong></em></td>
+</tr>
+<tr>
+<td align="center">Atmospheric 大气 <br />Cold 冷 <br />Dark 黑暗 <br />Doom 厄运 <br />Dramatic 戏剧性的 <br />Sinister 险恶</td>
+<td align="center">Afro-Cuban 非裔古巴人 Dance Pop 流行舞曲 Disco 迪斯科 Dubstep Dubstep的 Disco Funk 迪斯科放克 EDM Electro 电 High-NRG 高NRG House 房子 Trance 恍惚</td>
+<td align="center">Adan 阿丹 <br />Adjan 阿让 <br />Call to Prayer 祷告的呼召 <br />Gregorian <br />Chant 格里高利圣歌</td>
+</tr>
+<tr>
+<td align="center">Eclectic 折 衷</td>
+<td align="center">Downtempo 慢节奏</td>
+<td align="center">Character 字符</td>
+</tr>
+<tr>
+<td align="center">Adjunct 兼职 <br />Art Capriccio 狂想曲 <br />Mellifluous 美化 <br />Nü Progressive 进步 <br />Unusual 异常</td>
+<td align="center">Ambient 氛围 <br />Downtempo <br />慢节奏 Synthwave <br />合成波 <br />Trap 陷阱</td>
+<td align="center">I Want Song 我想要歌 <br />Hero Theme 英雄主题 <br />Strut 支柱 <br />March 三月 <br />Military 军事 <br />Villain Theme 反派主题</td>
+</tr>
+<tr>
+<td align="center">Emotion 情感</td>
+<td align="center">Electronic 电子的</td>
+<td align="center">Children 孩子</td>
+</tr>
+<tr>
+<td align="center">Anthemic 国歌 <br />Emotional 感情的 <br />Happy 快乐 <br />Jubilant 欢腾 <br />Melancholy 忧郁 <br />Sad</td>
+<td align="center">Ambient 氛围 <br />Cyberpunk 赛博朋克 Drum’n’bass Drum’n’bass 鼓与贝斯<br /> Dubstep Dubstep的 <br />Electronic 电子的 <br />Hypnogogical 催眠 <br />IDM Phonk 冯克 <br />Synthpop 合成流行音乐 <br />Techno 技术 Trap 陷阱</td>
+<td align="center">Lullaby 催眠曲 <br />Nursery Rhyme 童谣 <br />Sing-along 跟唱 <br />Toddler 幼儿</td>
+</tr>
+<tr>
+<td align="center">Hard 硬</td>
+<td align="center">Jazz&#x2F;Soul 爵士乐&#x2F;灵魂乐</td>
+<td align="center">Composer 作曲家</td>
+</tr>
+<tr>
+<td align="center">Aggressive 积极 <br />Banger 爆竹 <br />Power 权力 <br />Stadium 体育场 <br />Stomp 踩</td>
+<td align="center">Bebop 贝波普 <br />Gospel 福音 <br />Electro 电 <br />Frutiger Aero Frutiger 航空 <br />Jazz 爵士乐 <br />Latin Jazz 拉丁爵士乐 <br />RnB Soul 灵魂</td>
+<td align="center">Adagio 阿德吉奥 <br />Adjunct 兼职 <br />Andante 行板 <br />Allegro 快板 <br />Capriccio 狂想曲</td>
+</tr>
+<tr>
+<td align="center">Lyrical 抒情</td>
+<td align="center">Latin 拉丁语</td>
+<td align="center">Instruments 仪器</td>
+</tr>
+<tr>
+<td align="center">Broadway 百老汇 Cabaret 酒店 Lounge 休息室 Operatic 歌剧 Storytelling 故事 Torch-Lounge 火炬酒廊 Theatrical 戏剧 Troubadour 吟 游 诗人 Vegas 维加斯</td>
+<td align="center">Bossa Nova 博萨诺瓦 Latin Jazz 拉丁爵士乐 Forró Mambo 曼波 Salsa 萨尔萨 Tango 探戈</td>
+<td align="center">Acoustic Guitar 木吉他 Bass 低音 Doublebass 低音提琴 Electricbass 电贝司 Electric Guitar 电吉他 Fingerstyle Guitar 指弹吉他 Percussion 击发</td>
+</tr>
+<tr>
+<td align="center">Magical 神奇</td>
+<td align="center">Reggae 瑞格乐</td>
+<td align="center">Noise 噪声</td>
+</tr>
+<tr>
+<td align="center">Ethereal 空灵 Majestic 雄伟 Mysterious 神秘</td>
+<td align="center">Afrobeat 非洲节拍 Dancehall 舞厅 Dub Reggae 瑞格乐 Reggaeton 雷鬼</td>
+<td align="center">Chaotic 混沌 Distorted 扭曲 Glitch 故障 Noise 噪声 Random 随机 Stuttering 口吃</td>
+</tr>
+<tr>
+<td align="center">Minimal 极小</td>
+<td align="center">Metal 金属</td>
+<td align="center">Orchestral 管弦乐</td>
+</tr>
+<tr>
+<td align="center">Ambient 氛围 Cinematic 电影 Heat 热 Minimal 极小 Slow 慢 Sparse 稀疏</td>
+<td align="center">Black Metal 黑色金属 Deathcore 死亡核心 Death Metal 死亡金属 Heavy Metal 重金属 Heavy Metal Trap 重金属捕集器 Metalcore 金属芯 Nu Metal Nu Metal（努金属） Power Metal 动力金属</td>
+<td align="center">glissando trombone glissando 长号 legato cello 大提琴连奏 Orchestral 管弦乐 spiccato violins 斯皮卡托小提琴 staccato viola 断奏中提琴 Symphonic 交响</td>
+</tr>
+<tr>
+<td align="center">Party 党</td>
+<td align="center">Popular 流行</td>
+<td align="center">Retro 复古</td>
+</tr>
+<tr>
+<td align="center">German Schlager 德国施拉格 Glam 格南 Glitter 闪光 Groovy 槽的</td>
+<td align="center">Pop Dance Pop 流行舞曲 Pop Rock 流行摇滚 Kpop 韩流 Jpop 大通 RnB Synthpop 合成流行音乐</td>
+<td align="center">1960s 1960年代 Barbershop 理发店 Big Band 大乐队 Classic 经典 Doo Wop 嘟 Girl Group 女团 Mambo 曼波 Salooncore 沙龙核心 Swing 摆动 Traditional 传统的</td>
+</tr>
+<tr>
+<td align="center">Soft 软</td>
+<td align="center">Rock 岩石</td>
+<td align="center">Suffix 后缀</td>
+</tr>
+<tr>
+<td align="center">Ambient 氛围 Bedroom 卧室 Chillwave 寒波 Ethereal 空灵 Intimate 亲密 Heat 热 Sadcore 悲伤</td>
+<td align="center">Classic Rock 经典摇滚 Blues Rock 蓝调摇滚 Emo Glam Rock 华丽摇滚 Hardcore Punk 硬核朋克 Indie 独立 Industrial Rock 工业摇滚 Punk 朋克 Rock 岩石 Skate Rock 滑板摇滚 Skatecore 滑板芯 Suomipop</td>
+<td align="center">…core …核心 …jam …果酱 …out …外 …wave …浪</td>
+</tr>
+<tr>
+<td align="center">Weird 奇怪</td>
+<td align="center">Urban 都市的</td>
+<td align="center">Traditional 传统的</td>
+</tr>
+<tr>
+<td align="center">Carnival 狂欢节 Distorted 扭曲 Glitchy 毛刺 Haunted 闹鬼的 Hollow 空心 Musicbox 音乐盒 Random 随机</td>
+<td align="center">Funk 恐惧 Electro 电 HipHop 嘻哈 RnB Phonk 冯克 Rap Trap 陷阱</td>
+<td align="center">Americana 美洲 Barbershop 理发店 Christmas Carol 圣诞颂歌 Traditional 传统的</td>
+</tr>
+<tr>
+<td align="center">World&#x2F;Ethnic 世界&#x2F;民族</td>
+<td align="center"></td>
+<td align="center">Voice 声音</td>
+</tr>
+<tr>
+<td align="center">Arabian 阿拉伯 Bangra 班格拉 Calypso 卡吕普索 Chalga 查尔加 Egyptian 埃及人 Hindustani 印度斯坦语 Jewish Music 犹太音乐 Klezmer 克莱兹默 Middle East 中东 Polka 波尔卡 Russian Navy Song 俄罗斯海军之歌 Suomipop Tribal 部落</td>
+<td align="center"></td>
+<td align="center">A Cappella 无伴奏合唱 Arabian Ornamental 阿拉伯观赏 Dispassionate 冷静的 Emotional 感情的 Ethereal 空灵 Gregorian chant 格里高利圣歌 Hindustani 印度斯坦语 Lounge Singer 休息室歌手 Melismatic 旋律 Monotone 单调 Narration 叙事 Resonant 谐振 Spoken Word 口语 Sprechgesang Sultry 闷热 Scream 尖叫 Torchy 火炬 Vocaloid 声乐</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="1-4-歌曲延续创作"><a href="#1-4-歌曲延续创作" class="headerlink" title="1.4 歌曲延续创作"></a>1.4 歌曲延续创作</h3><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404151029862.png" style="zoom:67%;" />
+
+<p>点击 Get Whole Song 即可生成完整歌曲</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404151030713.png" style="zoom:67%;" />
+
+
+
+<h2 id="二、天工音乐"><a href="#二、天工音乐" class="headerlink" title="二、天工音乐"></a>二、天工音乐</h2><blockquote>
+<p>官方：天工AI（app）</p>
+<p>特点：可以上传音频，根据参考歌曲去创作新歌</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404151037019.png" style="zoom: 25%;" />
 
       
 
@@ -384,7 +674,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Suno"><span class="toc-number">1.</span> <span class="toc-text">一、Suno</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Suno"><span class="toc-number">1.</span> <span class="toc-text">一、Suno</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%AD%8C%E6%9B%B2%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 歌曲结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-GPT-%E6%AD%8C%E8%AF%8D%E7%94%9F%E6%88%90"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 GPT-歌词生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%AD%8C%E6%9B%B2%E9%A3%8E%E6%A0%BC"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 歌曲风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%AD%8C%E6%9B%B2%E5%BB%B6%E7%BB%AD%E5%88%9B%E4%BD%9C"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 歌曲延续创作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%A9%E5%B7%A5%E9%9F%B3%E4%B9%90"><span class="toc-number">2.</span> <span class="toc-text">二、天工音乐</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -526,7 +816,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">web-ui</a>
+                <a href="javascript:void(0)" class="js-tag color3">ConfyUI</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,7 +836,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ConfyUI</a>
+                <a href="javascript:void(0)" class="js-tag color2">web-ui</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,19 +844,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Suno</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">声音克隆</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">GPT-SoVITS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,6 +869,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">elevenlabs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">GPT-SoVITS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,6 +944,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MAC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">zsh</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
               </li>
              
@@ -690,14 +984,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MAC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">zsh</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -718,15 +1004,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TensorBoard</a>
+                <a href="javascript:void(0)" class="js-tag color5">正向传播</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">反向传播</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">梯度下降</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">torch.optim</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -754,6 +1048,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TensorBoard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">autograd</a>
               </li>
              
@@ -766,7 +1064,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">梯度下降</a>
+                <a href="javascript:void(0)" class="js-tag color5">Suno</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -814,6 +1116,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">机器学习建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">最小二乘法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">张量</a>
               </li>
              
@@ -823,14 +1133,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">机器学习建模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">最小二乘法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -863,6 +1165,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -914,6 +1228,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">实战项目</a>
               </li>
              
@@ -923,10 +1241,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Shebang</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1014,35 +1328,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Centos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">TIM</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">typora</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">正向传播</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">反向传播</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">torch.optim</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1062,6 +1352,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sklearn</a>
               </li>
              
@@ -1075,10 +1369,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回归树</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1126,6 +1416,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">思腾合力</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">模糊逻辑</a>
               </li>
              
@@ -1158,14 +1456,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">思腾合力</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">中文乱码</a>
               </li>
              
@@ -1175,18 +1465,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jupyter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">scipy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">numpy+mkl</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1206,10 +1484,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">第三章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">K-means</a>
               </li>
              
@@ -1219,6 +1493,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">第三章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jupyter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">scipy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">numpy+mkl</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1262,10 +1552,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">计算机网络概论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">聚类算法</a>
               </li>
              
@@ -1299,6 +1585,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">计算机网络概论</a>
               </li>
             
             <div class="clearfix"></div>
