@@ -79,6 +79,11 @@
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240420150209.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240420150152.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240420150357.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424111721.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424111653.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424114220.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424121121.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424110825.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240408230614.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/workflow (5).png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/workflow (6).png">
@@ -102,9 +107,21 @@
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240420232339.png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/workflow (15).png">
 <meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/ComfyUI_temp_eanhq_00011_.png">
-<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404221528178.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/workflow (18).png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/张元英 00_00_00-00_00_30.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/AnimateDiff_00007.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/AnimateDiff_00004.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424000139.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424000650.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424003434.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424003518.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/3 00_00_00-00_00_30~3.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/2 00_00_00-00_00_30~3.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/1 00_00_00-00_00_30~3.gif">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424001932.png">
+<meta property="og:image" content="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424002121.png">
 <meta property="article:published_time" content="2024-04-08T04:59:55.000Z">
-<meta property="article:modified_time" content="2024-04-22T07:29:06.942Z">
+<meta property="article:modified_time" content="2024-04-24T04:15:58.000Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="AIGC">
 <meta property="article:tag" content="ConfyUI">
@@ -660,6 +677,40 @@
 <p>乘数：想让帧数翻几倍</p>
 <p>其他选择默认即可</p>
 </blockquote>
+<h3 id="3-9-IPAdapter"><a href="#3-9-IPAdapter" class="headerlink" title="3.9 IPAdapter"></a>3.9 IPAdapter</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/cubiq/ComfyUI_InstantID">GitHub - cubiq&#x2F;ComfyUI_InstantID</a></p>
+<p><a target="_blank" rel="noopener" href="https://huggingface.co/h94">h94 (xiaohu) (huggingface.co)</a></p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424111721.png" style="zoom:67%;" />
+
+<p><strong>模型特点分析：</strong></p>
+<blockquote>
+<p><code>ipa_v1.5</code>  ：Token 8个，对于风格有一定的迁移</p>
+<p><code>ipa_Plus_v1.5</code> ：Token 16个，能更加还原原图风格，<strong>保持姿态一致性</strong></p>
+<p><code>ipa_light</code> ：更轻量级的模型，如果想要更偏向参考词而不是图片，用这个合适</p>
+<p><code>ipa_vit_G</code> ： 为一个用 大参数 <code>clip_vision</code> 的模型，出图更加细腻，但是也<code>不会保持姿势</code></p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424111653.png" style="zoom: 50%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424114220.png" style="zoom: 50%;" />
+
+<blockquote>
+<p><code>ipa_full_face_v1.5</code> ：8个Token，参考整张图片，面部如果在原图占比小那么效果会不好</p>
+<p><code>ipa_plus_face_v1.5</code> ：16个Token，单独把人物面部从原图中<strong>裁切</strong>出来进行参考</p>
+<p><code>ipa_faceid_v1.5</code>：基础 faceid</p>
+<p><code>ipa_faceid_plusv2_v1.5</code>：效果更好的 faceid</p>
+<p><code>ipa_faceid_portrait_v1.5</code>：</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424121121.png" style="zoom:67%;" />
+
+<p>v1.5 face</p>
+<p>风格转绘</p>
+<p>原理</p>
+<blockquote>
+<p>unCLIP 过程的升级版，把图像、文本分别分析成 TOKEN ，组成embedding 传入 U-Net</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424110825.png" style="zoom:67%;" />
+
 <h2 id="四、工作流构建"><a href="#四、工作流构建" class="headerlink" title="四、工作流构建"></a>四、工作流构建</h2><h3 id="4-1-放大"><a href="#4-1-放大" class="headerlink" title="4.1 放大"></a>4.1 放大</h3><img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240408230614.png" style="zoom:67%;" />
 
 <p><strong>自建放大模板：</strong></p>
@@ -753,7 +804,7 @@
 <blockquote>
 <p>这里的元节点数直接影响了生成帧数</p>
 </blockquote>
-<p><strong>AD文生视频 + 提示词微调</strong></p>
+<h4 id="t2v"><a href="#t2v" class="headerlink" title="t2v"></a>t2v</h4><p><strong>AD文生视频 + 提示词微调</strong></p>
 <blockquote>
 <p>控制动态：</p>
 <ul>
@@ -766,6 +817,8 @@
 
 <img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/AnimateDiff_00068.gif" style="zoom:67%;" />
 
+
+
 <p><strong>AD文生视频 + 提示词微调 + CN控制优化 + 补帧</strong></p>
 <blockquote>
 <p>控制动态：</p>
@@ -777,9 +830,7 @@
 </blockquote>
 <img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/workflow (11).png" style="zoom:67%;" />
 
-
-
-<p><strong>AD图生视频 +单图 +  高级CN控制</strong></p>
+<h4 id="i2v"><a href="#i2v" class="headerlink" title="i2v"></a>i2v</h4><p><strong>AD图生视频 +单图 +  高级CN控制</strong></p>
 <blockquote>
 <p>控制动态：</p>
 <ul>
@@ -807,7 +858,80 @@
 
 <img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/ComfyUI_temp_eanhq_00011_.png" style="zoom:67%;" />
 
-<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/202404221528178.gif" style="zoom:67%;" />
+<video src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/AnimateDiff_00066.mp4" style="zoom:67%;" />
+
+<h4 id="v2v"><a href="#v2v" class="headerlink" title="v2v"></a>v2v</h4><blockquote>
+<p>加载器——&gt;2个CN——&gt;K采样——&gt;输出</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/workflow (18).png" style="zoom:67%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/张元英 00_00_00-00_00_30.gif"  />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/AnimateDiff_00007.gif" style="zoom: 50%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/AnimateDiff_00004.gif" style="zoom: 33%;" />
+
+
+
+<h2 id="五、高级理解"><a href="#五、高级理解" class="headerlink" title="五、高级理解"></a>五、高级理解</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=bQmyE0IFWD8&list=PLK7sA3zrSa4s0tO8w2pdc7zPTcIAgS7ru&index=14">ComfyUI高级理解(1) 图像合成、Clip分离精确控制Prompts，总有你不知道的小技巧！ #comfyui #aigc - YouTube</a></p>
+</blockquote>
+<ol>
+<li>不要频繁编解码，编解码是有损失的，pixel到letent空间是 除以8的关系，在大佬的工作流里，一半只会有一次解码，后面还会跟一个图像修复</li>
+</ol>
+<h3 id="5-1-CLIP"><a href="#5-1-CLIP" class="headerlink" title="5.1 CLIP"></a>5.1 CLIP</h3><p>CLIP具体过程如下图</p>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424000139.png" style="zoom:67%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424000650.png" style="zoom:67%;" />
+
+<p><strong>CLIP三种融合方式</strong></p>
+<blockquote>
+<p>作用1：提词隔离（<code>比如撑着伞的女孩打着红色的伞</code> ，但是可能衣服也被“染”红了）</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424003434.png" style="zoom: 50%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424003518.png" style="zoom: 67%;" />
+
+<p>ConditioningAverage 条件平均</p>
+<blockquote>
+<p>可以制作物种融合</p>
+<p>插件卡片里的“系数” 是 上方条件的强度</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/3 00_00_00-00_00_30~3.gif" style="zoom:67%;" />
+
+
+
+<p>Conditioning(Combine) 条件合并</p>
+<blockquote>
+<p>适合平均采样<br>解决”染色”效果不好</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/2 00_00_00-00_00_30~3.gif" style="zoom:67%;" />
+
+
+
+<p>Conditioning (Concat) 条件联结</p>
+<blockquote>
+<p>可以比较完美的解决“染色”问题</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/1 00_00_00-00_00_30~3.gif" style="zoom:67%;" />
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="5-2-KSampler"><a href="#5-2-KSampler" class="headerlink" title="5.2 KSampler"></a>5.2 KSampler</h3><blockquote>
+<p>确定性采样器：step对整体构图影响不大，step高只是增加了细节；</p>
+<p>非确定性采样器：step对整体构图影响特别大，大到感觉换了个seed一样。</p>
+</blockquote>
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424001932.png" style="zoom:67%;" />
+
+<img src="https://gavin-pic-1302578220.cos.ap-beijing.myqcloud.com/20240424002121.png" style="zoom:67%;" />
 
       
 
@@ -970,7 +1094,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">一、基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Stable-Diffusion-%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Stable Diffusion 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-ComfyUI-%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 ComfyUI 文件结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-ComfyUI-%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 ComfyUI 快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%89%93%E5%8C%85"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 打包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">二、模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-ConrtolNet"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 ConrtolNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-CLIP%E8%A7%86%E8%A7%89%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 CLIP视觉编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-LCM-lora%E5%BF%AB%E9%80%9F%E5%87%BA%E5%9B%BE"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 LCM-lora快速出图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-SDXL-turbo-%E5%BF%AB%E9%80%9F%E5%87%BA%E5%9B%BE"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 SDXL-turbo 快速出图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">三、必备插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Comfy-UI-Manager"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Comfy-UI-Manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-WD1-4-%E5%8F%8D%E6%8E%A8"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 WD1.4 反推</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-SDXL%E9%A3%8E%E6%A0%BC%E5%8C%96"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 SDXL风格化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-AnimateDiff"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 AnimateDiff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-VideoHelperSuite"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 VideoHelperSuite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-FIZZ"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 FIZZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-Advanced-ControlNet"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 Advanced-ControlNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-Frame-Interpolation%E8%A1%A5%E5%B8%A7"><span class="toc-number">3.8.</span> <span class="toc-text">3.8 Frame-Interpolation补帧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%9E%84%E5%BB%BA"><span class="toc-number">4.</span> <span class="toc-text">四、工作流构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%94%BE%E5%A4%A7"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 放大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-SVD"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 SVD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-SDXL%E9%A3%8E%E6%A0%BC%E5%8C%96%E6%96%87%E7%94%9F%E5%9B%BE"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 SDXL风格化文生图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-ControlNet"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 ControlNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E5%BF%AB%E9%80%9F%E5%87%BA%E5%9B%BE"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 快速出图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-ComfyUI-AnimateDiff"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 ComfyUI-AnimateDiff</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">一、基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Stable-Diffusion-%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Stable Diffusion 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-ComfyUI-%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 ComfyUI 文件结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-ComfyUI-%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 ComfyUI 快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%89%93%E5%8C%85"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 打包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">二、模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-ConrtolNet"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 ConrtolNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-CLIP%E8%A7%86%E8%A7%89%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 CLIP视觉编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-LCM-lora%E5%BF%AB%E9%80%9F%E5%87%BA%E5%9B%BE"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 LCM-lora快速出图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-SDXL-turbo-%E5%BF%AB%E9%80%9F%E5%87%BA%E5%9B%BE"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 SDXL-turbo 快速出图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">三、必备插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Comfy-UI-Manager"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Comfy-UI-Manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-WD1-4-%E5%8F%8D%E6%8E%A8"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 WD1.4 反推</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-SDXL%E9%A3%8E%E6%A0%BC%E5%8C%96"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 SDXL风格化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-AnimateDiff"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 AnimateDiff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-VideoHelperSuite"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 VideoHelperSuite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-FIZZ"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 FIZZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-Advanced-ControlNet"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 Advanced-ControlNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-Frame-Interpolation%E8%A1%A5%E5%B8%A7"><span class="toc-number">3.8.</span> <span class="toc-text">3.8 Frame-Interpolation补帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-IPAdapter"><span class="toc-number">3.9.</span> <span class="toc-text">3.9 IPAdapter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%9E%84%E5%BB%BA"><span class="toc-number">4.</span> <span class="toc-text">四、工作流构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%94%BE%E5%A4%A7"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 放大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-SVD"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 SVD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-SDXL%E9%A3%8E%E6%A0%BC%E5%8C%96%E6%96%87%E7%94%9F%E5%9B%BE"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 SDXL风格化文生图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-ControlNet"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 ControlNet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E5%BF%AB%E9%80%9F%E5%87%BA%E5%9B%BE"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 快速出图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-ComfyUI-AnimateDiff"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 ComfyUI-AnimateDiff</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#t2v"><span class="toc-number">4.6.1.</span> <span class="toc-text">t2v</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#i2v"><span class="toc-number">4.6.2.</span> <span class="toc-text">i2v</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#v2v"><span class="toc-number">4.6.3.</span> <span class="toc-text">v2v</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%AB%98%E7%BA%A7%E7%90%86%E8%A7%A3"><span class="toc-number">5.</span> <span class="toc-text">五、高级理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-CLIP"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 CLIP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-KSampler"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 KSampler</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -1132,6 +1256,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换脸</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AI工具</a>
               </li>
              
@@ -1141,10 +1269,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换脸</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1176,10 +1300,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">GPT-SoVITS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">视频修复</a>
               </li>
              
@@ -1189,6 +1309,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">CodeFormer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">GPT-SoVITS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1232,6 +1356,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">工具使用教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">GAN</a>
               </li>
              
@@ -1244,15 +1376,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">工具使用教程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1261,6 +1385,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">zsh</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Matplotlib</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1300,15 +1436,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jupyter Notebook</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Matplotlib</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1365,10 +1493,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">动态计算图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">损失函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1504,6 +1628,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">实战项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">名片管理系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Shebang</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高级变量</a>
               </li>
              
@@ -1525,18 +1661,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">切片</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">实战项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">名片管理系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Shebang</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1596,18 +1720,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">飞机大战</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">pygame</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目源码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
@@ -1628,11 +1740,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">TIM</a>
+                <a href="javascript:void(0)" class="js-tag color5">飞机大战</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">typora</a>
+                <a href="javascript:void(0)" class="js-tag color2">pygame</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目源码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1652,39 +1768,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">理论学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">TIM</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">论文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">聚类</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">密度峰值</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">局域网互联</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">远程访问</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">信息论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">比特</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">信息量</a>
+                <a href="javascript:void(0)" class="js-tag color2">typora</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1704,11 +1792,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
+                <a href="javascript:void(0)" class="js-tag color5">理论学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">frp</a>
+                <a href="javascript:void(0)" class="js-tag color3">论文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">聚类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">密度峰值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">信息论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">比特</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">信息量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">局域网互联</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">远程访问</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1717,6 +1837,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">粗糙集</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内网穿透</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">frp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1764,10 +1892,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Jupyter</a>
               </li>
              
@@ -1788,14 +1912,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">贝叶斯分类器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">拉格朗日乘子法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">第三章</a>
               </li>
              
@@ -1809,6 +1925,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">高斯混合聚类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">贝叶斯分类器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">拉格朗日乘子法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1832,6 +1956,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">聚类算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">离散数学</a>
               </li>
              
@@ -1845,14 +1977,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ㄱ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">聚类算法</a>
               </li>
              
               <li class="article-tag-list-item">
